@@ -1,0 +1,96 @@
+ {activeButton === "Attendify" && (
+              <div className="flex lg:flex-row flex-col w-full lg:w-auto gap-x-8 py-8 justify-center">
+                <div className="text-4xl font-semibold  w-full lg:w-1/2 text-white">
+                  <div className="-ml-4 flex ">
+                    <div
+                      className="w-1 bg-gradient-to-b from-blue-text to-green-text"
+                      style={{ color: COLORS.text }}
+                    ></div>
+                    <div
+                      className="ml-4 text-2xl lg:text-4xl"
+                      style={{ color: COLORS.text }}
+                    >
+                      <h1>Attendance has never been easier</h1>
+                    </div>
+                  </div>
+                  <div
+                    className="flex flex-col gap-y-2 py-4 mt-4"
+                    style={{ color: COLORS.text }}
+                  >
+                    <div
+                      className="flex justify-center items-start"
+                      style={{ color: COLORS.text }}
+                    >
+                      <Clock className="mr-2 text-lg" />{" "}
+                      {/* Clock icon for Real-Time Attendance */}
+                      <div
+                        className="text-white font-light text-lg"
+                        style={{ color: COLORS.text }}
+                      >
+                        <span className="font-bold">Real-Time Attendance:</span>{" "}
+                        Automating student recognition with cameras to simplify
+                        attendance management for teachers.
+                      </div>
+                    </div>
+
+                    <div className="flex justify-center items-start">
+                      <Cloud className="mr-2 text-lg" />{" "}
+                      {/* Cloud icon for Cloud-Powered */}
+                      <div
+                        className="font-light text-lg"
+                        style={{ color: COLORS.text }}
+                      >
+                        <span className="font-bold">Cloud-Powered:</span> Fast
+                        and accurate processing, even on low-end devices, thanks
+                        to cloud integration
+                      </div>
+                    </div>
+
+                    <div className="flex justify-center items-start">
+                      <CheckCircle className="mr-2 text-lg" />{" "}
+                      {/* Check-circle icon for One-Click Setup */}
+                      <div
+                        className="text-white font-light text-lg"
+                        style={{ color: COLORS.text }}
+                      >
+                        <span className="font-bold">One-Click Setup:</span>{" "}
+                        Teachers can set up and start using Attendify with
+                        minimal effort, requiring no technical expertise
+                      </div>
+                    </div>
+
+                    <div className="flex justify-center items-start">
+                      <BarChart className="mr-2 text-lg" />{" "}
+                      {/* Bar-chart icon for Automated Reporting */}
+                      <div
+                        className="text-white font-light text-lg"
+                        style={{ color: COLORS.text }}
+                      >
+                        <span className="font-bold">Automated Reporting:</span>{" "}
+                        Automatically generates detailed attendance reports
+                        streamlining administrative processes
+                      </div>
+                    </div>
+                  </div>
+                  <div className="flex justify-center items-center lg:justify-start lg:items-start mt-6 gap-x-6">
+                    <button
+                      className={`${COLORS.titel_bg} block px-4 py-1 text-base rounded-l-full rounded-r-full text-center text-white`}
+                    >
+                      Try Attendify
+                    </button>
+                    <button className="block px-4 py-1 text-base bg-[#031223] border-[1px]  border-white rounded-l-full rounded-r-full text-center text-white">
+                      Learn More
+                    </button>
+                  </div>
+                </div>
+                <div className="text-5xl w-full lg:w-1/2 mt-12 lg:mt-0 text-white">
+                  <div>
+                    <img
+                      className="object-cover w-full h-full"
+                      src={slide1}
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+            )}

@@ -1,0 +1,61 @@
+<div className="max-w-7xl mx-auto px-4 py-16">
+        {/* Header Section */}
+        <div
+          className="text-center mb-16"
+          style={{
+            color: COLORS.text,
+          }}
+        >
+          <h2
+            className="text-4xl font-bold text-gray-200 mb-4"
+            style={{
+              color: COLORS.text,
+            }}
+          >
+            {pageContent.last.title}
+          </h2>
+          <p
+            className="text-xl text-gray-200 max-w-3xl mx-auto"
+            style={{
+              color: COLORS.text,
+            }}
+          >
+            {pageContent.last.desc}
+          </p>
+        </div>
+
+        {/* Steps Grid */}
+        <div
+          className="grid md:grid-cols-2 gap-8"
+          style={{
+            color: COLORS.text,
+          }}
+        >
+          {pageContent.last.steps.map((step, index) => (
+            <div key={index} className="overflow-hidden shadow-lg">
+              <div className="p-6">
+                <div className="mb-6">
+                  <span className={`${COLORS.title_color} font-bold text-xl`}>
+                    {step.number}. {step.title}
+                  </span>
+                  <p
+                    className={`${COLORS.title_color} mt-2 text-sm`}
+                    style={{
+                      color: COLORS.text,
+                    }}
+                  >
+                    {step.description}
+                  </p>
+                </div>
+                <div className="bg-white rounded-lg h-64 flex items-center justify-center overflow-hidden">
+                  <img
+                    src={step.img}
+                    alt="Labeling example"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
