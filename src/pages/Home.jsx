@@ -241,7 +241,9 @@ const Home = () => {
                       className="ml-4 text-2xl lg:text-4xl"
                       style={{ color: COLORS.text }}
                     >
-                      <h1>Unlock Visual AI Capabilities in Snowflake</h1>
+                      <h1>
+                        Revolutionizing Road Safety and Traffic Management
+                      </h1>
                     </div>
                   </div>
                   <div
@@ -294,22 +296,21 @@ const Home = () => {
                     </div>
                   </div>
                   <div className="flex justify-center items-center lg:justify-start lg:items-start mt-6 gap-x-6">
-                    <button
-                      className={`${COLORS.titel_bg} block px-4 py-1 text-base rounded-l-full rounded-r-full text-center text-white`}
-                    >
-                      <a href="/omniroad">Try OmniRoad 2.0</a>
-                    </button>
                     <button className="block px-4 py-1 text-base bg-[#031223] border-[1px]  border-white rounded-l-full rounded-r-full text-center text-white">
                       Learn More
                     </button>
                   </div>
                 </div>
                 <div className="text-5xl w-full lg:w-1/2 mt-12 lg:mt-0 text-white">
-                  <div>
-                    <img
+                  <div className="relative w-full h-full">
+                    <video
                       className="object-cover w-full h-full"
-                      src={slide2}
-                      alt=""
+                      src="/omni-1-mov.mov"
+                      type="video/mp4"
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
                     />
                   </div>
                 </div>
@@ -325,7 +326,7 @@ const Home = () => {
                       className="ml-4 text-2xl lg:text-4xl"
                       style={{ color: COLORS.text }}
                     >
-                      <h1>A Visual AI Pilot for Developers</h1>
+                      <h1>Real-Time Visitor Analytics and Insights</h1>
                     </div>
                   </div>
                   <div
@@ -383,11 +384,6 @@ const Home = () => {
                     </div>
                   </div>
                   <div className="flex justify-center items-center lg:justify-start lg:items-start mt-6 gap-x-6">
-                    <button
-                      className={`${COLORS.titel_bg} block px-4 py-1 text-base rounded-l-full rounded-r-full text-center text-white`}
-                    >
-                      <a href="/crowdiq">Try CrowsIQ</a>
-                    </button>
                     <button className="block px-4 py-1 text-base bg-[#031223] border-[1px]  border-white rounded-l-full rounded-r-full text-center text-white">
                       Learn More
                     </button>
@@ -397,7 +393,7 @@ const Home = () => {
                   <div>
                     <img
                       className="object-cover w-full h-full"
-                      src={slide3}
+                      src="/crowd-1.png"
                       alt=""
                     />
                   </div>

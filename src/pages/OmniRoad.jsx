@@ -85,7 +85,7 @@ const OmniRoad = () => {
           variants={fadeIn}
         >
           <video
-            className="object-cover w-full max-h-[80vh] sm:max-h-[60vh] lg:max-h-[50vh] xl:max-h-[40vh]"
+            className="object-cover w-full max-h-[90vh] sm:max-h-[70vh] lg:max-h-[60vh] xl:max-h-[50vh]"
             src={pageContent.hero.image} // Change this to the path of your video
             alt="Hero Video"
             autoPlay
@@ -253,12 +253,12 @@ const OmniRoad = () => {
 
       {/* Data-Centric AI Section */}
       <motion.div
-        className={`${COLORS.titel_bg} text-white p-8 flex items-center`}
+        className={`${COLORS.titel_bg} text-white flex flex-col lg:flex-row items-center justify-center gap-8 px-4 py-12 lg:py-16 text-white`} // `justify-between` for space between
         initial="hidden"
         animate="visible"
         variants={fadeIn}
       >
-        <motion.div className="flex-1 pr-8" variants={slideIn}>
+        <motion.div className="w-full lg:w-1/2 max-w-2xl" variants={slideIn}>
           <motion.h2 className="text-2xl font-bold mb-4" variants={slideIn}>
             {pageContent.dataCentricAI.title}
           </motion.h2>
@@ -287,31 +287,13 @@ const OmniRoad = () => {
             {pageContent.dataCentricAI.buttonText}
           </motion.button>
         </motion.div>
-
-        <motion.div className="flex-1" variants={slideIn}>
-          <div className="bg-white p-4 rounded-lg shadow-lg">
-            <div className="flex space-x-4">
-              {pageContent.dataCentricAI.images.map((image, index) => (
-                <motion.div key={index} className="flex-1" variants={slideIn}>
-                  <img
-                    src={image.src}
-                    alt={`Image ${index + 1}`}
-                    className="w-full h-auto rounded"
-                  />
-                  <div className="flex items-center justify-between mt-2">
-                    <span className="text-gray-700">
-                      Agreement Score - {image.score}
-                    </span>
-                    {image.agreement ? (
-                      <CheckCircle2 className="text-green-500" size={24} />
-                    ) : (
-                      <XCircle className="text-red-500" size={24} />
-                    )}
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
+        {/* Adjust padding for spacing */}
+        <motion.div className="w-full lg:w-1/2 max-w-2xl" variants={slideIn}>
+          <img
+            src={pageContent.dataCentricAI.images}
+            alt="Visual Prompting Interface"
+            className="w-full h-auto rounded-lg shadow-lg"
+          />
         </motion.div>
       </motion.div>
 

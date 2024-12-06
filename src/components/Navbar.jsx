@@ -52,9 +52,9 @@ const Navbar = () => {
         }`}
       >
         <div className="logo">
-          <img src="/logo.png" className="h-16 w-16" alt="" />
+          <img src="/logo.png" className="h-20 w-20" alt="" />
         </div>
-        <div className="hidden lg:flex lg:text-lg gap-x-8 xl:text-xl font-semibold text-white">
+        <div className="hidden lg:flex lg:text-lg gap-x-8 xl:text-xl font-semibold text-white ml-24">
           <div className="flex justify-center items-center ">
             <Link
               to="/"

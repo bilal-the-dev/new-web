@@ -227,10 +227,7 @@ export const products = {
         "Customizable Deployment: Choose between cloud or on-premises options for optimal performance and data security.",
       ],
       buttonText: "Learn More",
-      images: [
-        { src: "/omni-4.jpg", score: 90, agreement: true },
-        { src: "/omni-4.jpg", score: 30, agreement: false },
-      ],
+      images: "/omni-4.jpg",
     },
     analytics: {
       badge: "POWERFUL ANALYTICS",
@@ -381,10 +378,7 @@ export const products = {
         "Flexible Deployment: Choose between cloud-based processing for convenience or on-premises deployment for enhanced data security.",
       ],
       buttonText: "Learn More",
-      images: [
-        { src: "/crowd-2.png", score: 90, agreement: true },
-        { src: "/crowd-2.png", score: 30, agreement: false },
-      ],
+      images: "/crowd-2.png",
     },
     analytics: {
       badge: "POWERFUL ANALYTICS",
