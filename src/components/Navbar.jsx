@@ -130,7 +130,7 @@ const Navbar = () => {
               className="px-4 py-2 text-gray-300 rounded transition duration-300"
               activeClassName="text-blue-400"
             >
-              Let’s Build Your Vision
+              Contact Us
             </Link>
           </button>
         </div>
@@ -219,7 +219,7 @@ const Navbar = () => {
                     src="https://landing.ai/wp-content/uploads/2023/12/Validation.svg"
                     alt=""
                   />
-                  <Link to="/build-your-vision">Lets Build Your Vision</Link>
+                  <Link to="/build-your-vision">Contact Us</Link>
                 </div>
               </div>
             </div>

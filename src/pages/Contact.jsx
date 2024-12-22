@@ -1,14 +1,5 @@
 import React, { useEffect, useState } from "react";
-import {
-  MapPin,
-  Phone,
-  Mail,
-  Clock,
-  Send,
-  Linkedin,
-  Twitter,
-  Facebook,
-} from "lucide-react";
+import { Send, MapPinIcon, PhoneIcon, MailIcon } from "lucide-react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { CONTACT_US_CONTENT } from "../constants/contact";
@@ -128,37 +119,79 @@ const ContactUsPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-24">
             <div className="space-y-8">
               <h3 className="text-4xl lg:text-5xl font-semibold mb-4">
-                <span className={`${COLORS.title_color}`}>
+                <span className={`text-blue-500`}>
                   {CONTACT_US_CONTENT.contactInfo.title}
                 </span>
               </h3>
-              <p className="text-lg leading-relaxed">
-                Do you have a{" "}
-                <span className={`${COLORS.title_color} font-semibold`}>
-                  unique challenge
-                </span>{" "}
-                or need a custom computer vision solution? We’re here to help
-                bring your vision to life. Fill out your information and tell us
-                about your specific needs, and we’ll work with you to design and
-                implement a solution perfectly tailored to your business.
-              </p>
-              <p className="text-lg leading-relaxed">
-                At DevelMo, we specialize in creating{" "}
-                <span className={`${COLORS.title_color} font-semibold`}>
-                  customized computer vision applications{" "}
-                </span>
-                that solve real-world problems—no off-the-shelf products, just
-                solutions built specifically for you.
-              </p>
-              <p className="text-lg leading-relaxed">
-                For any other inquiries or product support, feel free to contact
-                us directly. We look forward to
-                <span className={`${COLORS.title_color} font-semibold`}>
-                  {" "}
-                  collaborating on your vision
-                </span>
-                !
-              </p>
+
+              <div className="space-y-6">
+                {/* Address Section */}
+                <div className="flex items-start space-x-4 group">
+                  <div className="bg-blue-500 p-3 rounded-lg transform transition-all group-hover:scale-110">
+                    <MapPinIcon className="w-6 h-6 text-white" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-lg font-semibold text-gray-800 mb-1">
+                      Address:
+                    </h3>
+                    <p className="text-gray-600">
+                      20 Wenlock Road
+                      <br />
+                      London N1 7GU, United Kingdom
+                    </p>
+                  </div>
+                </div>
+
+                {/* Phone Numbers Section */}
+                <div className="flex items-start space-x-4 group">
+                  <div className="bg-blue-500 p-3 rounded-lg transform transition-all group-hover:scale-110">
+                    <PhoneIcon className="w-6 h-6 text-white" />
+                  </div>
+                  <div className="flex-1 space-y-2">
+                    <h3 className="text-lg font-semibold text-gray-800 mb-1">
+                      Phone:
+                    </h3>
+                    <div className="space-y-1">
+                      <p className="text-gray-600">
+                        <span className="font-medium text-blue-600">
+                          Saudi Arabia:{" "}
+                        </span>
+                        +966 (0) 55 1028874
+                      </p>
+                      <p className="text-gray-600">
+                        <span className="font-medium text-blue-600">
+                          Australia:{" "}
+                        </span>
+                        +61 (0) 480 008104
+                      </p>
+                      <p className="text-gray-600">
+                        <span className="font-medium text-blue-600">
+                          Pakistan:{" "}
+                        </span>
+                        +92 (0) 331 647636
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Email Section */}
+                <div className="flex items-start space-x-4 group">
+                  <div className="bg-blue-500 p-3 rounded-lg transform transition-all group-hover:scale-110">
+                    <MailIcon className="w-6 h-6 text-white" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-lg font-semibold text-gray-800 mb-1">
+                      Email:
+                    </h3>
+                    <a
+                      href="mailto:info@develmo.com"
+                      className="text-blue-500 hover:text-blue-700 transition-colors"
+                    >
+                      info@develmo.com
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
             <div className="space-y-8">
               <h2 className="text-3xl font-bold mb-4">

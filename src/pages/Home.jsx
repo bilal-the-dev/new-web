@@ -97,7 +97,7 @@ const Home = () => {
                 style={{ color: COLORS.text }}
               >
                 Unlock insights from visuals with custom computer
-                <br /> vision solutions.
+                <br /> vision solutions
               </div>
               <div className="flex gap-x-4 lg:gap-x-8">
                 <button className="bg-blue-500 text-white font-bold text-center px-6 py-1.5 rounded-r-full rounded-l-full">

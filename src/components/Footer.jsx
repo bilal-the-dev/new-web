@@ -1,3 +1,6 @@
+import { Facebook, Twitter, Instagram } from "lucide-react";
+import { FaLinkedinIn, FaYoutube } from "react-icons/fa";
+
 function Footer() {
   return (
     <footer className="bg-black text-white px-4 py-8 md:px-8 lg:px-16">
@@ -9,8 +12,7 @@ function Footer() {
               <span className="text-xl font-bold">DevelMo</span>
             </div>
             <p className="text-sm text-gray-400">
-              DevelMo™ helps companies build, deploy, and scale Visual AI
-              solutions.
+              © 2024 DevelMo ltd All rights reserved.
             </p>
           </div>
 
@@ -23,7 +25,7 @@ function Footer() {
                 { name: "Contact Us", link: "/build-your-vision" },
                 { name: "Industry", link: "/industry" },
               ].map((item) => (
-                <li key={item}>
+                <li key={item.name}>
                   <a
                     href={item.link}
                     className="text-sm text-gray-400 hover:text-white"
@@ -34,8 +36,6 @@ function Footer() {
               ))}
             </ul>
           </div>
-
-          {/* Resources */}
 
           {/* Product */}
           <div>
@@ -45,7 +45,7 @@ function Footer() {
                 { name: "CrowdIQ", link: "/crowdiq" },
                 { name: "OmniRoad 2.0", link: "/omniroad" },
               ].map((item) => (
-                <li key={item}>
+                <li key={item.name}>
                   <a
                     href={item.link}
                     className="text-sm text-gray-400 hover:text-white"
@@ -56,7 +56,56 @@ function Footer() {
               ))}
             </ul>
           </div>
+
+          <div className="flex flex-col">
+            <h1 className="text-lg font-semibold"> Follow us on</h1>
+            <div className="flex  mt-6 space-x-6">
+              <a
+                href="https://facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white"
+              >
+                <Facebook size={24} />
+              </a>
+              <a
+                href="https://twitter.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white"
+              >
+                <Twitter size={24} />
+              </a>
+              <a
+                href="https://linkedin.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white"
+              >
+                <FaLinkedinIn size={24} />
+              </a>
+
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white"
+              >
+                <Instagram size={24} />
+              </a>
+              <a
+                href="https://youtube.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white"
+              >
+                <FaYoutube size={24} />
+              </a>
+            </div>
+          </div>
         </div>
+
+        {/* Social Media Icons */}
       </div>
     </footer>
   );
