@@ -29,6 +29,11 @@ const Navbar = () => {
       title: "CrowIQ",
       path: "/crowdiq",
     },
+    {
+      icon: "",
+      title: "Attendify",
+      path: "/attendify",
+    },
   ];
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -116,6 +121,18 @@ const Navbar = () => {
               activeClassName="text-blue-400"
             >
               Industries
+            </Link>
+          </div>
+
+          <div className="flex justify-center items-center">
+            <Link
+              to="/about"
+              className={`px-4 py-2 ${
+                isProductPage ? "text-gray-800" : "text-gray-300"
+              } hover:text-white hover:bg-gray-700 rounded transition duration-300`}
+              activeClassName="text-blue-400"
+            >
+              About Us
             </Link>
           </div>
           <div className="flex justify-center items-center"></div>

@@ -8,6 +8,8 @@ import Industry from "./pages/Industy";
 import Footer from "./components/Footer";
 import OmniRoad from "./pages/OmniRoad";
 import CrowdIQ from "./pages/CrowdIQ";
+import Attendify from "./pages/Attendify";
+import About from "./pages/About";
 export default function App() {
   return (
     <Router>
@@ -18,8 +20,10 @@ export default function App() {
         <Route path="/product/:text" element={<Product />} />
         <Route path="/industry" element={<Industry />} />
         <Route path="/omniroad/" element={<OmniRoad />} />
-
         <Route path="/crowdiq/" element={<CrowdIQ />} />
+        <Route path="/attendify/" element={<Attendify />} />
+
+        <Route path="/about/" element={<About />} />
       </Routes>
 
       <Footer />

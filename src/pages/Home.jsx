@@ -1,14 +1,9 @@
 import React, { useState } from "react";
-import left from "../assets/Home/left.webp";
-import right from "../assets/Home/right.webp";
-import slide1 from "../assets/slider/pic1.webp";
-import slide2 from "../assets/slider/pic2.webp";
-import slide3 from "../assets/slider/pic3.png";
-import rabbit from "../assets/slider/icons/rabbit.svg";
-import video from "../assets/Home/desktop-1.mp4";
 import { motion } from "framer-motion";
 import { COLORS } from "../constants/config";
 import { Link } from "react-router-dom";
+
+import question from "../assets/question.png";
 import {
   Clock,
   Cloud,
@@ -17,8 +12,98 @@ import {
   Zap,
   Repeat,
   Calendar,
+  CheckCircle2,
 } from "lucide-react";
-import {} from "lucide-react";
+
+import {
+  ArrowRight,
+  Camera,
+  Cpu,
+  BarChart3,
+  MessageSquare,
+} from "lucide-react";
+
+import {
+  HandshakeIcon,
+  Settings2,
+  ClipboardCheck,
+  Monitor,
+} from "lucide-react";
+
+import { Brain, CircuitBoard, Shield } from "lucide-react";
+
+const features = [
+  {
+    icon: <Brain className="w-12 h-12 text-white" />,
+    title: "Leverage AI where you need it",
+    description:
+      "Orchestrate workloads for AI inferencing and Deep Learning to scale up data at the edge",
+  },
+  {
+    icon: <CircuitBoard className="w-12 h-12 text-white" />,
+    title: "Simplify your edge",
+    description:
+      "Modernize edge AI architecture and workloads at scale to power various use cases",
+  },
+  {
+    icon: <Shield className="w-12 h-12 text-white" />,
+    title: "Protect your edge",
+    description:
+      "Embed cybersecurity expertise into your IT infrastructure and processes",
+  },
+];
+const steps = [
+  {
+    icon: <Camera className="w-16 h-16 text-gray-700" />,
+    title: "Connect CCTV",
+    description: "Connect to existing CCTV infrastructure",
+  },
+  {
+    icon: <Cpu className="w-16 h-16 text-blue-500" />,
+    title: "Process Video",
+    description: "Video feed is processed through AI-powered analytics",
+  },
+  {
+    icon: <MessageSquare className="w-16 h-16 text-blue-400" />,
+    title: "Real-Time Alerts",
+    description: "Follow up on notifications to ensure smooth operations",
+  },
+  {
+    icon: <BarChart3 className="w-16 h-16 text-gray-700" />,
+    title: "Analyze Trends",
+    description: "Understand if your action plans are working effectively",
+  },
+];
+
+const bulletPoints = [
+  "Streamlining operations and generating real-time insights where and when needed.",
+  "Providing end-to-end security, ensuring protection from design to deployment.",
+  "Supporting scalability and driving innovation through low-latency edge computing applications.",
+];
+
+const section2Steps = [
+  {
+    icon: <HandshakeIcon className="w-8 h-8 text-blue-500" />,
+    description: "Introduction & Technology Demo",
+  },
+  {
+    icon: <Settings2 className="w-8 h-8 text-blue-500" />,
+    description: "Share your Business specific Requirements",
+  },
+  {
+    icon: <ClipboardCheck className="w-8 h-8 text-blue-500" />,
+    description: "Mutual agreement on POC Scope",
+  },
+  {
+    icon: <Monitor className="w-8 h-8 text-blue-500" />,
+    description: "Proof of Concept Execution & Evaluation",
+  },
+  {
+    icon: <BarChart3 className="w-8 h-8 text-blue-500" />,
+    description: "Full-Scale Deployment",
+  },
+];
+
 const Home = () => {
   const [activeButton, setActiveButton] = useState("OmniRoad 2.0");
 
@@ -408,6 +493,198 @@ const Home = () => {
         className=" p-12 lg:p-16 flex flex-col gap-8 animate-fadeIn"
         style={{ backgroundColor: COLORS.background }}
       >
+        {/* Section of arrows */}
+        <div className="mb-18">
+          <div className="-ml-4 flex mb-8 ">
+            <div className="text-white w-1 bg-gradient-to-b from-blue-text to-green-text "></div>
+            <div
+              className="ml-4 text-2xl lg:text-4xl font-semibold"
+              style={{ color: COLORS.text }}
+            >
+              <h1>Monetize Your Video Surveillance Data</h1>
+            </div>
+          </div>
+          <p>
+            Transform your exiting video surveillance data into a powerful
+            business asset. Use your existing IP security camera setup into
+            actionable insights that can drive business efficiency, enhance
+            operation excellence, and uncover new revenue opportunities. We
+            design AI-powered analytics based on your business needs that help
+            you to build data-driven strategies for growth. Whether you’re in
+            retail, logistics, or any other industry, we help you maximize the
+            potential of your monitoring systems. With DevelMo, your
+            surveillance data will becomes a strategic advantage for smarter
+            decision-making and operational excellence
+          </p>
+
+          <div className="container mx-auto px-4 py-8">
+            <div className="flex flex-wrap items-center justify-center gap-4">
+              {steps.map((step, index) => (
+                <React.Fragment key={index}>
+                  <div className="flex flex-col items-center text-center max-w-xs">
+                    <div className="bg-gray-100 rounded-lg p-6 mb-4">
+                      {step.icon}
+                    </div>
+                    <h3 className="text-xl font-bold mb-2 text-gray-800">
+                      {step.title}
+                    </h3>
+                    <p className="text-gray-600 text-sm">{step.description}</p>
+                  </div>
+                  {index < steps.length - 1 && (
+                    <ArrowRight className="w-8 h-8 text-blue-500 hidden md:block" />
+                  )}
+                </React.Fragment>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <div
+          style={{
+            color: COLORS.text,
+          }}
+          className="flex flex-col lg:flex-row items-center justify-center gap-8 px-4 py-12 lg:py-28 text-white"
+          initial="hidden"
+        >
+          <div className="w-full lg:w-1/2 max-w-2xl">
+            <img
+              className="object-cover w-full max-h-[80vh] sm:max-h-[60vh] lg:max-h-[50vh] xl:max-h-[40vh] rounded-xl"
+              src={question} // Change this to the path of your video
+              alt="Visual Prompting Interface Video"
+            />
+          </div>
+
+          <div className="w-full lg:w-1/2 max-w-2xl">
+            <div className="flex">
+              <CheckCircle2
+                className={`${COLORS.title_color} w-6 h-6 mr-2 flex-shrink-0`}
+              />
+              <p className="text-lg mb-4 text-center lg:text-left">
+                Capitalize on your edge
+              </p>
+            </div>
+            <h3 className="text-3xl lg:text-5xl font-semibold mb-6 text-center lg:text-left">
+              <span className={`${COLORS.title_color} font-bold`}>
+                Why Edge Computing?
+              </span>
+            </h3>
+
+            <p className="text-lg mb-8 text-center lg:text-left">
+              Capitalize on your edge and drive innovation with DevelMo edge
+              computing low latency applications
+            </p>
+
+            <ul className="space-y-4 mb-8">
+              {bulletPoints.map((item, index) => (
+                <li key={index} className="flex items-start">
+                  <CheckCircle2 className="w-6 h-6 mr-2 flex-shrink-0 text-blue-400" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        <div className="bg-blue-500 py-16 px-4">
+          <div className="container mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => (
+                <div
+                  key={index}
+                  className="flex flex-col items-center text-center text-white"
+                >
+                  <div className="mb-6">{feature.icon}</div>
+                  <h3 className="text-xl font-semibold mb-4">
+                    {feature.title}
+                  </h3>
+                  <p className="text-white/90">{feature.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-28 mb-20 flex flex-col md:flex-row items-center justify-between space-y-8 md:space-y-0">
+          <div className="flex-1 text-center md:text-left">
+            <p className="text-lg text-gray-800 leading-relaxed">
+              AI applications requiring real-time performance leverage
+              pretrained models and local GPU processing at edge data centers.
+              Pretrained models, fine-tuned for specific tasks, enable rapid
+              deployment and efficient inference while reducing the need for
+              intensive model training on-site. By processing data closer to the
+              source, edge data centers minimize latency, enhance
+              responsiveness, and deliver secure, scalable AI solutions for
+              applications like autonomous systems, IoT devices, and smart
+              industries.
+            </p>
+          </div>
+
+          <div className="flex-1">
+            <img
+              src="/edgecomputing.png"
+              alt="Edge Computing"
+              className="w-full h-auto rounded-lg shadow-lg object-cover"
+            />
+          </div>
+        </div>
+
+        <div>
+          <div className="-ml-4 flex mb-8 ">
+            <div className="text-white w-1 bg-gradient-to-b from-blue-text to-green-text "></div>
+            <div
+              className="ml-4 text-2xl lg:text-4xl font-semibold"
+              style={{ color: COLORS.text }}
+            >
+              <h1>Monetize Your Video Surveillance Data</h1>
+            </div>
+          </div>
+          <p>
+            At DevelMo, we understand that every business has unique needs. Our
+            customized AI video analytics solutions are tailored to align with
+            your specific requirements, ensuring maximum impact and efficiency.
+            We focus on delivering solutions that fit your goals and streamline
+            your operations.
+          </p>
+
+          <div
+            className={`ml-4 mt-8 text-2xl lg:text-3xl font-semibold flex justify-center ${COLORS.title_color}`}
+          >
+            <h1>Implementation Frame work for your Unique Product</h1>
+          </div>
+          <div className="container mx-auto px-4 py-12">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+              {steps.map((step, index) => (
+                <React.Fragment key={index}>
+                  <div className="w-64 relative group">
+                    <div className="bg-gray-900/5 backdrop-blur-sm p-6 rounded-xl shadow-lg  hover:shadow-xl transition-all duration-300 ">
+                      <div className="flex flex-col items-center gap-4">
+                        <div className="bg-white p-4 rounded-full shadow-md">
+                          {step.icon}
+                        </div>
+                        <div className="text-sm font-medium text-center text-gray-700">
+                          Step {index + 1}:
+                          <div className="mt-1 text-gray-600">
+                            {step.description}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  {index < steps.length - 1 && (
+                    <div className="hidden md:block">
+                      <ArrowRight className="w-8 h-8 text-blue-500 animate-pulse" />
+                    </div>
+                  )}
+                </React.Fragment>
+              ))}
+            </div>
+          </div>
+          <p>
+            This structured approach guarantees that our AI video analytics
+            solutions are customized to meet your specific requirements, driving
+            operational excellence and informed decision-making
+          </p>
+        </div>
         <div className="flex flex-col lg:flex-row gap-8">
           <div className="bg-gradient-to-br from-blue-500 to-green-400 rounded-lg p-8 flex-1 transition-transform transform hover:scale-105 animate-fadeIn">
             <div className="text-center">
