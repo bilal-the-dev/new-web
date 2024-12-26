@@ -52,11 +52,12 @@ const features = [
       "Embed cybersecurity expertise into your IT infrastructure and processes",
   },
 ];
+
 const steps = [
   {
     icon: <Camera className="w-16 h-16 text-gray-700" />,
     title: "Connect CCTV",
-    description: "Connect to existing CCTV infrastructure",
+    description: "Connect to exiting CCTV infrastructure",
   },
   {
     icon: <Cpu className="w-16 h-16 text-blue-500" />,
@@ -67,11 +68,11 @@ const steps = [
     icon: <MessageSquare className="w-16 h-16 text-blue-400" />,
     title: "Real-Time Alerts",
     description: "Follow up on notifications to ensure smooth operations",
-  },
-  {
-    icon: <BarChart3 className="w-16 h-16 text-gray-700" />,
-    title: "Analyze Trends",
-    description: "Understand if your action plans are working effectively",
+    subStep: {
+      icon: <BarChart3 className="w-16 h-16 text-gray-700" />,
+      title: "Analyze Trends",
+      description: "Understand if your action plans are working effectively",
+    },
   },
 ];
 
@@ -134,11 +135,11 @@ const Home = () => {
     <div style={{ backgroundColor: COLORS.background, color: COLORS.text }}>
       {/* ..hero section */}
       <div
-        className="w-full mb-24 text-white"
+        className="w-full  text-white"
         style={{ backgroundColor: COLORS.background, color: COLORS.text }}
       >
         <div
-          className="w-full h-auto flex lg:flex-row flex-col justify-center items-center mb-24"
+          className="w-full h-auto flex lg:flex-row flex-col justify-center items-center"
           style={{ backgroundColor: COLORS.background, color: COLORS.text }}
         >
           {/* Left Section */}
@@ -212,6 +213,76 @@ const Home = () => {
           </motion.div>
         </div>
 
+        <div
+          className=" p-12 lg:p-16 flex flex-col gap-8 animate-fadeIn"
+          style={{ backgroundColor: COLORS.background }}
+        >
+          {/* Section of arrows */}
+          <div className="mb-18">
+            <div className="-ml-4 flex mb-8 ">
+              <div className="text-white w-1 bg-gradient-to-b from-blue-text to-green-text "></div>
+              <div
+                className="ml-4 text-2xl lg:text-4xl font-semibold"
+                style={{ color: COLORS.text }}
+              >
+                <h1>Monetize Your Video Surveillance Data</h1>
+              </div>
+            </div>
+            <p>
+              Transform your exiting video surveillance data into a powerful
+              business asset. Use your existing IP security camera setup into
+              actionable insights that can drive business efficiency, enhance
+              operation excellence, and uncover new revenue opportunities. We
+              design AI-powered analytics based on your business needs that help
+              you to build data-driven strategies for growth. Whether you’re in
+              retail, logistics, or any other industry, we help you maximize the
+              potential of your monitoring systems. With DevelMo, your
+              surveillance data will becomes a strategic advantage for smarter
+              decision-making and operational excellence
+            </p>
+
+            <div className="container mx-auto px-4 py-8">
+              <div className="flex flex-wrap items-center justify-center gap-4">
+                {steps.map((step, index) => (
+                  <React.Fragment key={index}>
+                    <div className="flex flex-col items-center">
+                      <div className="flex flex-col items-center text-center max-w-xs">
+                        <div className="bg-gray-100 rounded-lg p-6 mb-4">
+                          {step.icon}
+                        </div>
+                        <h3 className="text-xl font-bold mb-2 text-gray-800">
+                          {step.title}
+                        </h3>
+                        <p className="text-gray-600 text-sm">
+                          {step.description}
+                        </p>
+                      </div>
+
+                      {step.subStep && (
+                        <div className="flex flex-col items-center text-center max-w-xs mt-8">
+                          <div className="bg-gray-100 rounded-lg p-6 mb-4">
+                            {step.subStep.icon}
+                          </div>
+                          <h3 className="text-xl font-bold mb-2 text-gray-800">
+                            {step.subStep.title}
+                          </h3>
+                          <p className="text-gray-600 text-sm">
+                            {step.subStep.description}
+                          </p>
+                        </div>
+                      )}
+                    </div>
+
+                    {index < steps.length - 1 && (
+                      <ArrowRight className="w-8 h-8 text-blue-500 hidden md:block" />
+                    )}
+                  </React.Fragment>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Video Section */}
         <div
           className=" py-6"
@@ -279,18 +350,77 @@ const Home = () => {
             </motion.video>
           </div>
         </div>
+
+        <div className=" p-12 lg:p-16 flex flex-col  animate-fadeIn">
+          <div className="-ml-4 flex mb-8 ">
+            <div className="text-white w-1 bg-gradient-to-b from-blue-text to-green-text "></div>
+            <div
+              className="ml-4 text-2xl lg:text-4xl font-semibold"
+              style={{ color: COLORS.text }}
+            >
+              <h1>Every Business is Unique!</h1>
+            </div>
+          </div>
+          <p>
+            At DevelMo, we understand that every business has unique needs. Our
+            customized AI video analytics solutions are tailored to align with
+            your specific requirements, ensuring maximum impact and efficiency.
+            We focus on delivering solutions that fit your goals and streamline
+            your operations.
+          </p>
+
+          <div
+            className={`ml-4 mt-8 text-2xl lg:text-3xl font-semibold flex justify-center ${COLORS.title_color}`}
+          >
+            <h1>Implementation Frame work for your Unique Product</h1>
+          </div>
+          <div className="container mx-auto px-4 py-12">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+              {steps.map((step, index) => (
+                <React.Fragment key={index}>
+                  <div className="w-64 relative group">
+                    <div className="bg-gray-900/5 backdrop-blur-sm p-6 rounded-xl shadow-lg  hover:shadow-xl transition-all duration-300 ">
+                      <div className="flex flex-col items-center gap-4">
+                        <div className="bg-white p-4 rounded-full shadow-md">
+                          {step.icon}
+                        </div>
+                        <div className="text-sm font-medium text-center text-gray-700">
+                          Step {index + 1}:
+                          <div className="mt-1 text-gray-600">
+                            {step.description}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  {index < steps.length - 1 && (
+                    <div className="hidden md:block">
+                      <ArrowRight className="w-8 h-8 text-blue-500 animate-pulse" />
+                    </div>
+                  )}
+                </React.Fragment>
+              ))}
+            </div>
+          </div>
+          <p>
+            This structured approach guarantees that our AI video analytics
+            solutions are customized to meet your specific requirements, driving
+            operational excellence and informed decision-making
+          </p>
+        </div>
       </div>
 
       {/* changing sliders sections */}
       <div
-        className=" p-2 lg:p-16"
+        className=" p-2 lg:px-16"
         style={{ backgroundColor: COLORS.background }}
       >
         <div>
           <div className="et_pb_text_inner">
-            <h3 className="text-3xl  lg:text-6xl font-semibold">
+            <h3 className="text-3xl  lg:text-5xl font-semibold">
               <span className={`${COLORS.title_color}`}>
-                Visual AI: Tailored for Your Unique Vision Tasks
+                Accelerate your business with Our off-the-shelf AI-Powered
+                products
               </span>
             </h3>
           </div>
@@ -493,57 +623,11 @@ const Home = () => {
         className=" p-12 lg:p-16 flex flex-col gap-8 animate-fadeIn"
         style={{ backgroundColor: COLORS.background }}
       >
-        {/* Section of arrows */}
-        <div className="mb-18">
-          <div className="-ml-4 flex mb-8 ">
-            <div className="text-white w-1 bg-gradient-to-b from-blue-text to-green-text "></div>
-            <div
-              className="ml-4 text-2xl lg:text-4xl font-semibold"
-              style={{ color: COLORS.text }}
-            >
-              <h1>Monetize Your Video Surveillance Data</h1>
-            </div>
-          </div>
-          <p>
-            Transform your exiting video surveillance data into a powerful
-            business asset. Use your existing IP security camera setup into
-            actionable insights that can drive business efficiency, enhance
-            operation excellence, and uncover new revenue opportunities. We
-            design AI-powered analytics based on your business needs that help
-            you to build data-driven strategies for growth. Whether you’re in
-            retail, logistics, or any other industry, we help you maximize the
-            potential of your monitoring systems. With DevelMo, your
-            surveillance data will becomes a strategic advantage for smarter
-            decision-making and operational excellence
-          </p>
-
-          <div className="container mx-auto px-4 py-8">
-            <div className="flex flex-wrap items-center justify-center gap-4">
-              {steps.map((step, index) => (
-                <React.Fragment key={index}>
-                  <div className="flex flex-col items-center text-center max-w-xs">
-                    <div className="bg-gray-100 rounded-lg p-6 mb-4">
-                      {step.icon}
-                    </div>
-                    <h3 className="text-xl font-bold mb-2 text-gray-800">
-                      {step.title}
-                    </h3>
-                    <p className="text-gray-600 text-sm">{step.description}</p>
-                  </div>
-                  {index < steps.length - 1 && (
-                    <ArrowRight className="w-8 h-8 text-blue-500 hidden md:block" />
-                  )}
-                </React.Fragment>
-              ))}
-            </div>
-          </div>
-        </div>
-
         <div
           style={{
             color: COLORS.text,
           }}
-          className="flex flex-col lg:flex-row items-center justify-center gap-8 px-4 py-12 lg:py-28 text-white"
+          className="flex flex-col lg:flex-row items-center justify-center gap-8 px-4 py-12 lg:py-4 text-white"
           initial="hidden"
         >
           <div className="w-full lg:w-1/2 max-w-2xl">
@@ -628,63 +712,6 @@ const Home = () => {
           </div>
         </div>
 
-        <div>
-          <div className="-ml-4 flex mb-8 ">
-            <div className="text-white w-1 bg-gradient-to-b from-blue-text to-green-text "></div>
-            <div
-              className="ml-4 text-2xl lg:text-4xl font-semibold"
-              style={{ color: COLORS.text }}
-            >
-              <h1>Monetize Your Video Surveillance Data</h1>
-            </div>
-          </div>
-          <p>
-            At DevelMo, we understand that every business has unique needs. Our
-            customized AI video analytics solutions are tailored to align with
-            your specific requirements, ensuring maximum impact and efficiency.
-            We focus on delivering solutions that fit your goals and streamline
-            your operations.
-          </p>
-
-          <div
-            className={`ml-4 mt-8 text-2xl lg:text-3xl font-semibold flex justify-center ${COLORS.title_color}`}
-          >
-            <h1>Implementation Frame work for your Unique Product</h1>
-          </div>
-          <div className="container mx-auto px-4 py-12">
-            <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-              {steps.map((step, index) => (
-                <React.Fragment key={index}>
-                  <div className="w-64 relative group">
-                    <div className="bg-gray-900/5 backdrop-blur-sm p-6 rounded-xl shadow-lg  hover:shadow-xl transition-all duration-300 ">
-                      <div className="flex flex-col items-center gap-4">
-                        <div className="bg-white p-4 rounded-full shadow-md">
-                          {step.icon}
-                        </div>
-                        <div className="text-sm font-medium text-center text-gray-700">
-                          Step {index + 1}:
-                          <div className="mt-1 text-gray-600">
-                            {step.description}
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  {index < steps.length - 1 && (
-                    <div className="hidden md:block">
-                      <ArrowRight className="w-8 h-8 text-blue-500 animate-pulse" />
-                    </div>
-                  )}
-                </React.Fragment>
-              ))}
-            </div>
-          </div>
-          <p>
-            This structured approach guarantees that our AI video analytics
-            solutions are customized to meet your specific requirements, driving
-            operational excellence and informed decision-making
-          </p>
-        </div>
         <div className="flex flex-col lg:flex-row gap-8">
           <div className="bg-gradient-to-br from-blue-500 to-green-400 rounded-lg p-8 flex-1 transition-transform transform hover:scale-105 animate-fadeIn">
             <div className="text-center">

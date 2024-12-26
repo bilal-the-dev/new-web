@@ -145,19 +145,17 @@ const About = () => {
                   We are UK-based company with our offices in{" "}
                   <span>Saudi Arabia, Australia</span> and <span>Pakistan</span>
                   . We enable businesses and their industries to increase their
-                  performance and enhance customer experience.
+                  performance and enhance customer experience. Our team of AI
+                  video experts is dedicated to helping businesses unlock the
+                  full potential of their surveillance footage. Our mission is
+                  to transform standard security recordings into valuable
+                  insights that drive operational excellence and strategic
+                  decision-making.
                 </p>
               </div>
 
               <div className="flex items-start gap-2">
-                <Building className="w-6 h-6 text-blue-500 mt-1 flex-shrink-0" />
-                <p className="text-gray-700 leading-relaxed">
-                  Our team of AI video experts is dedicated to helping
-                  businesses unlock the full potential of their surveillance
-                  footage. Our mission is to transform standard security
-                  recordings into valuable insights that drive operational
-                  excellence and strategic decision-making.
-                </p>
+                <p className="text-gray-700 leading-relaxed"></p>
               </div>
             </div>
 

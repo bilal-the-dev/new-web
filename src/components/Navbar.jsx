@@ -138,13 +138,13 @@ const Navbar = () => {
           <div className="flex justify-center items-center"></div>
         </div>
 
-        <div className="hidden lg:block text-white  font-bold">
+        <div className="hidden lg:block text-white  font-bold mb-2">
           <button
             className={`${COLORS.titel_bg} rounded-l-full rounded-r-full px-6 py-2 lg:text-sm xl:text-base `}
           >
             <Link
               to="/build-your-vision"
-              className="px-4 py-2 text-gray-300 rounded transition duration-300"
+              className="px-4 py-2 text-gray-100 rounded transition duration-300"
               activeClassName="text-blue-400"
             >
               Contact Us
