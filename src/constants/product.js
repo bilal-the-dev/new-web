@@ -16,7 +16,7 @@ export const products = {
       title: "Transforming Classroom Attendance with AI",
       description:
         "Attendify uses AI facial recognition for fast, accurate attendance tracking, letting teachers focus on teaching.",
-      image: feature1,
+      image: "/attendify-3.png",
       bulletPoints: [
         "No More Manual Tracking: Save valuable class time by automating attendance.",
         "Easy Student Setup: Upload a single photo per student to get started.",
@@ -29,7 +29,7 @@ export const products = {
       title: "Built to Simplify Attendance Management",
       description:
         "Attendify’s features are designed to streamline and enhance attendance management for teachers.",
-      image: feature1,
+      image: "attendify-2.png",
       bulletPoints: [
         "Photo Setup: Teachers upload a single photo per student, enabling accurate recognition for the entire term",
         "Real-Time Tracking: Attendance is automatically recorded as students face the camera, with instant feedback to ensure accuracy.",
@@ -64,20 +64,18 @@ export const products = {
       buttons: [],
     },
     dataCentricAI: {
-      title: "ACHIEVE DATA CONSISTENCY",
-      heading: "Data-Centric AI delivers accurate results faster",
+      mainTitle: "Empowering Educators with Insights",
+      title: "Empowering Educators with Insights",
+      heading: "Attendify doesn’t just stop at tracking attendance",
       description:
-        "Data-Centric AI makes models work with small datasets by ensuring data quality.",
+        "It provides powerful tools to help teachers and administrators make informed decisions.",
       bulletPoints: [
-        "Ensure data consistency in LandingLens using our label book to align on clear definitions of classes and labels across your team.",
-        "Advanced labeling technology automatically detects mislabeled images, improving your overall data quality",
-        "Collaborative labeling enables multiple users to collectively label images, fostering consensus in the data.",
+        "Attendance Analytics: Generate reports to track patterns, trends, and challenges.",
+        "Custom Notifications: Instantly notify parents of student absences to enhance engagement.",
+        "Seamless Integration: Sync attendance data with school systems to streamline workflows.",
       ],
       buttonText: "Learn More",
-      images: [
-        { src: feature1, score: 90, agreement: true },
-        { src: feature1, score: 30, agreement: false },
-      ],
+      images: "/attendify-1.png",
     },
     analytics: {
       badge: "POWERFUL ANALYTICS",
@@ -227,7 +225,7 @@ export const products = {
         "Customizable Deployment: Choose between cloud or on-premises options for optimal performance and data security.",
       ],
       buttonText: "Learn More",
-      images: "/omni-4.jpg",
+      image: "/omni-4.jpg",
     },
     analytics: {
       badge: "POWERFUL ANALYTICS",
@@ -318,7 +316,7 @@ export const products = {
       title: "Insights to Retail Spaces",
       description:
         "CrowdIQ uses AI analytics to deliver real-time visitor insights, helping retailers enhance customer experience and optimize operations.",
-      image: "/crowd-4.png",
+      image: "/crowdiq-5.png",
       bulletPoints: [
         "AI-Driven Visitor Analytics: Understand visitor behavior, demographics, and engagement patterns effortlessly",
         "Automated Crowd Monitoring: Track visitor counts, density, and flow to adjust in-store layouts and promotions.",
@@ -378,7 +376,7 @@ export const products = {
         "Flexible Deployment: Choose between cloud-based processing for convenience or on-premises deployment for enhanced data security.",
       ],
       buttonText: "Learn More",
-      images: "/crowd-2.png",
+      image: "/crowd-2.png",
     },
     analytics: {
       badge: "POWERFUL ANALYTICS",

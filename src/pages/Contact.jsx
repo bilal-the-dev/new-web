@@ -119,7 +119,7 @@ const ContactUsPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-24">
             <div className="space-y-8">
               <h3 className="text-4xl lg:text-5xl font-semibold mb-4">
-                <span className={`text-blue-500`}>
+                <span className={`text-[#2596be] `}>
                   {CONTACT_US_CONTENT.contactInfo.title}
                 </span>
               </h3>
@@ -127,7 +127,7 @@ const ContactUsPage = () => {
               <div className="space-y-6">
                 {/* Address Section */}
                 <div className="flex items-start space-x-4 group">
-                  <div className="bg-blue-500 p-3 rounded-lg transform transition-all group-hover:scale-110">
+                  <div className="bg-[#2596be]  p-3 rounded-lg transform transition-all group-hover:scale-110">
                     <MapPinIcon className="w-6 h-6 text-white" />
                   </div>
                   <div className="flex-1">
@@ -144,7 +144,7 @@ const ContactUsPage = () => {
 
                 {/* Phone Numbers Section */}
                 <div className="flex items-start space-x-4 group">
-                  <div className="bg-blue-500 p-3 rounded-lg transform transition-all group-hover:scale-110">
+                  <div className="bg-[#2596be]  p-3 rounded-lg transform transition-all group-hover:scale-110">
                     <PhoneIcon className="w-6 h-6 text-white" />
                   </div>
                   <div className="flex-1 space-y-2">
@@ -153,19 +153,19 @@ const ContactUsPage = () => {
                     </h3>
                     <div className="space-y-1">
                       <p className="text-gray-600">
-                        <span className="font-medium text-blue-600">
+                        <span className="font-medium text-[#2596be] ">
                           Saudi Arabia:{" "}
                         </span>
                         +966 (0) 55 1028874
                       </p>
                       <p className="text-gray-600">
-                        <span className="font-medium text-blue-600">
+                        <span className="font-medium text-[#2596be] ">
                           Australia:{" "}
                         </span>
                         +61 (0) 480 008104
                       </p>
                       <p className="text-gray-600">
-                        <span className="font-medium text-blue-600">
+                        <span className="font-medium text-[#2596be] ">
                           Pakistan:{" "}
                         </span>
                         +92 (0) 331 647636
@@ -176,7 +176,7 @@ const ContactUsPage = () => {
 
                 {/* Email Section */}
                 <div className="flex items-start space-x-4 group">
-                  <div className="bg-blue-500 p-3 rounded-lg transform transition-all group-hover:scale-110">
+                  <div className="bg-[#2596be]  p-3 rounded-lg transform transition-all group-hover:scale-110">
                     <MailIcon className="w-6 h-6 text-white" />
                   </div>
                   <div className="flex-1">
@@ -185,7 +185,7 @@ const ContactUsPage = () => {
                     </h3>
                     <a
                       href="mailto:info@develmo.com"
-                      className="text-blue-500 hover:text-blue-700 transition-colors"
+                      className="text-[#2596be]  hover:text-blue-700 transition-colors"
                     >
                       info@develmo.com
                     </a>
@@ -246,7 +246,7 @@ const ContactUsPage = () => {
                 ))}
                 <motion.button
                   type="submit"
-                  className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg flex items-center justify-center gap-2 transition duration-300 w-full sm:w-auto"
+                  className="bg-[#2596be]  hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg flex items-center justify-center gap-2 transition duration-300 w-full sm:w-auto"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >

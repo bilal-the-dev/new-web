@@ -38,19 +38,18 @@ const CrowdIQ = () => {
       style={{
         backgroundColor: COLORS.background,
         color: COLORS.text,
-        padding: "1.5rem",
         minHeight: "100vh",
       }}
     >
       {/* Hero Section */}
       <motion.div
-        className="flex flex-col items-center gap-8"
+        className="flex flex-col items-center gap-4 mb-16"
         initial="hidden"
         animate="visible"
         variants={fadeIn}
       >
         <motion.h3
-          className="text-3xl text-center pt-28 lg:text-5xl font-semibold"
+          className="text-5xl text-center pt-28 lg:text-6xl font-semibold"
           variants={slideIn}
         >
           <span className="font-bold text-blue-600">
@@ -58,7 +57,7 @@ const CrowdIQ = () => {
               {pageContent.hero.title}{" "}
             </span>
             <br />{" "}
-            <span className={`${COLORS.title_color}`}>
+            <span className={`${COLORS.title_color} text-2xl lg:text-4xl`}>
               {pageContent.hero?.breakTitle}
             </span>
           </span>
@@ -80,13 +79,6 @@ const CrowdIQ = () => {
             {pageContent.hero.buttonText}
           </button>
         </motion.div>
-        <motion.div className="flex h-full items-center" variants={fadeIn}>
-          <img
-            className="object-cover w-full max-h-[95vh] sm:max-h-[75vh] lg:max-h-[65vh] xl:max-h-[55vh] rounded-xl"
-            src={pageContent.hero.image}
-            alt=""
-          />
-        </motion.div>
       </motion.div>
 
       {/* Features Section */}
@@ -94,26 +86,29 @@ const CrowdIQ = () => {
         style={{
           color: COLORS.text,
         }}
-        className="flex flex-col lg:flex-row items-center justify-center gap-8 px-4 py-12 lg:py-28 text-white"
+        className={`${COLORS.titel_bg} text-white flex flex-col lg:flex-row items-center justify-center gap-8 px-4 py-12 lg:py-12`}
         initial="hidden"
         data-aos="fade-up"
         animate="visible"
         variants={fadeIn}
       >
-        <motion.div className="w-full lg:w-1/2 max-w-2xl" variants={slideIn}>
+        <motion.div
+          className="w-full lg:w-1/3 max-w-2xl mb-24"
+          variants={slideIn}
+        >
           <img
-            className="object-cover w-full max-h-[80vh] sm:max-h-[60vh] lg:max-h-[50vh] xl:max-h-[40vh] rounded-xl"
             src={pageContent.feature_1.image}
-            alt=""
+            alt="Visual Prompting Interface"
+            className="w-full h-auto rounded-lg"
           />
         </motion.div>
 
         <motion.div className="w-full lg:w-1/2 max-w-2xl" variants={slideIn}>
           <div className="flex">
             <CheckCircle2
-              className={`${COLORS.title_color} w-6 h-6 mr-2 flex-shrink-0`}
+              className={`${COLORS.title_color} w-6 h-6 mr-2 flex-shrink-0 text-white`}
             />
-            <p className="text-lg mb-4 text-center lg:text-left">
+            <p className="text-lg mb-4 text-center lg:text-left text-white">
               {pageContent.feature_1.mainTitle}
             </p>
           </div>
@@ -121,13 +116,13 @@ const CrowdIQ = () => {
             className="text-3xl lg:text-5xl font-semibold mb-6 text-center lg:text-left"
             variants={slideIn}
           >
-            <span className={`${COLORS.title_color} font-bold`}>
+            <span className={`${COLORS.title_color} font-bold text-white`}>
               {pageContent.feature_1.title}
             </span>
           </motion.h3>
 
           <motion.p
-            className="text-lg mb-8 text-center lg:text-left"
+            className="text-lg mb-8 text-center lg:text-left text-white"
             variants={slideIn}
           >
             {pageContent.feature_1.description}
@@ -140,8 +135,8 @@ const CrowdIQ = () => {
                 className="flex items-start"
                 variants={slideIn}
               >
-                <CheckCircle2 className="w-6 h-6 mr-2 flex-shrink-0 text-blue-400" />
-                <span>{item}</span>
+                <CheckCircle2 className="w-6 h-6 mr-2 flex-shrink-0 text-white" />
+                <span className="text-white">{item}</span>
               </motion.li>
             ))}
           </motion.ul>
@@ -240,49 +235,76 @@ const CrowdIQ = () => {
         </motion.div>
       </motion.div>
 
-      {/* Data-Centric AI Section */}
       <motion.div
-        className={`${COLORS.titel_bg} text-white flex flex-col lg:flex-row items-center justify-center gap-8 px-4 py-12 lg:py-16 text-white`} // `justify-between` for space between
+        style={{
+          color: COLORS.text,
+        }}
+        className={`${COLORS.secondaryBackground} flex flex-col lg:flex-row items-center justify-center gap-8 px-4 py-12 lg:py-8 text-white`}
         initial="hidden"
+        data-aos="fade-up"
         animate="visible"
         variants={fadeIn}
       >
         <motion.div className="w-full lg:w-1/2 max-w-2xl" variants={slideIn}>
-          <motion.h2 className="text-2xl font-bold mb-4" variants={slideIn}>
-            {pageContent.dataCentricAI.title}
-          </motion.h2>
-          <motion.h1 className="text-4xl font-bold mb-6" variants={slideIn}>
-            {pageContent.dataCentricAI.heading}
-          </motion.h1>
-          <motion.p className="mb-4" variants={slideIn}>
+          <img
+            src={pageContent.dataCentricAI.image}
+            alt="Visual Prompting Interface"
+            className="w-full h-auto rounded-lg"
+          />
+        </motion.div>
+        <motion.div className="w-full lg:w-1/2 max-w-2xl" variants={slideIn}>
+          <div className="flex">
+            <Bell className="w-6 h-6 mr-2 flex-shrink-0 text-blue-400" />
+            <p className="text-lg mb-4 text-center lg:text-left">
+              {pageContent.dataCentricAI.title}
+            </p>
+          </div>
+          <motion.h3
+            className="text-3xl lg:text-5xl font-semibold mb-6 text-center lg:text-left"
+            variants={slideIn}
+          >
+            <span className={`${COLORS.title_color}`}>
+              {pageContent.dataCentricAI.heading}
+            </span>
+          </motion.h3>
+          <motion.p
+            className="text-lg mb-8 text-center lg:text-left"
+            variants={slideIn}
+          >
             {pageContent.dataCentricAI.description}
           </motion.p>
-          <motion.ul className="space-y-2" variants={slideIn}>
-            {pageContent.dataCentricAI.bulletPoints.map((point, index) => (
+
+          <motion.ul className="space-y-4 mb-8" variants={slideIn}>
+            {pageContent.dataCentricAI.bulletPoints.map((item, index) => (
               <motion.li
                 key={index}
                 className="flex items-start"
                 variants={slideIn}
               >
-                <CheckCircle2 className="mr-2 flex-shrink-0 mt-1" size={20} />
-                <span>{point}</span>
+                <CheckCircle2 className="w-6 h-6 mr-2 flex-shrink-0 text-blue-400" />
+                <span>{item}</span>
               </motion.li>
             ))}
           </motion.ul>
-          <motion.button
-            className={`${COLORS.title_color} mt-6 bg-white px-6 py-2 rounded-full font-semibold`}
+
+          <motion.div
+            className="flex justify-center lg:justify-start space-x-4"
+            data-aos="fade-up"
             variants={slideIn}
           >
-            {pageContent.dataCentricAI.buttonText}
-          </motion.button>
-        </motion.div>
-        {/* Adjust padding for spacing */}
-        <motion.div className="w-full lg:w-1/2 max-w-2xl" variants={slideIn}>
-          <img
-            src={pageContent.dataCentricAI.images}
-            alt="Visual Prompting Interface"
-            className="w-full h-auto rounded-lg shadow-lg"
-          />
+            {pageContent.feature_2.buttons.map((button, index) => (
+              <button
+                key={index}
+                className={`${
+                  button.primary
+                    ? "bg-blue-500 hover:bg-blue-600 text-white"
+                    : "border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white"
+                } font-bold py-2 px-6 rounded-full transition duration-300`}
+              >
+                {button.text}
+              </button>
+            ))}
+          </motion.div>
         </motion.div>
       </motion.div>
 

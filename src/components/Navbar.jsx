@@ -15,6 +15,10 @@ const Navbar = () => {
     location.pathname.startsWith("/build-your-vision") ||
     location.pathname.startsWith("/industry") ||
     location.pathname.startsWith("/");
+  const isHomePage = location.pathname === "/";
+
+  const isAbout = location.pathname === "/about";
+  const isindustry = location.pathname === "/industry";
   const [toggle, settoggle] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
   const menuRef = useRef(null);
@@ -60,15 +64,19 @@ const Navbar = () => {
           <img src="/logo.png" className="h-20 w-20" alt="" />
         </div>
         <div className="hidden lg:flex lg:text-lg gap-x-8 xl:text-xl font-semibold text-white ml-24">
-          <div className="flex justify-center items-center ">
+          <div className="flex flex-col items-center">
             <Link
               to="/"
               className={`px-4 py-2 ${
                 isProductPage ? "text-gray-800" : "text-gray-300"
-              } hover:text-white hover:bg-gray-700 rounded transition duration-300`}
-              activeClassName="text-blue-400"
+              } hover:text-gray-500  rounded transition duration-300 relative group`}
             >
               Home
+              <div
+                className={`absolute bottom-0 left-0 w-full h-0.5 bg-[#2596be] transform origin-left transition-transform duration-300 ${
+                  isHomePage ? "scale-x-100" : "scale-x-0"
+                } group-hover:scale-x-100`}
+              />
             </Link>
           </div>
           <div
@@ -112,27 +120,35 @@ const Navbar = () => {
             )}
           </div>
 
-          <div className="flex justify-center items-center">
+          <div className="flex flex-col items-center">
             <Link
               to="/industry"
               className={`px-4 py-2 ${
                 isProductPage ? "text-gray-800" : "text-gray-300"
-              } hover:text-white hover:bg-gray-700 rounded transition duration-300`}
-              activeClassName="text-blue-400"
+              } hover:text-gray-500  rounded transition duration-300 relative group`}
             >
               Industries
+              <div
+                className={`absolute bottom-0 left-0 w-full h-0.5 bg-[#2596be] transform origin-left transition-transform duration-300 ${
+                  isindustry ? "scale-x-100" : "scale-x-0"
+                } group-hover:scale-x-100`}
+              />
             </Link>
           </div>
 
-          <div className="flex justify-center items-center">
+          <div className="flex flex-col items-center">
             <Link
               to="/about"
               className={`px-4 py-2 ${
                 isProductPage ? "text-gray-800" : "text-gray-300"
-              } hover:text-white hover:bg-gray-700 rounded transition duration-300`}
-              activeClassName="text-blue-400"
+              } hover:text-gray-500  rounded transition duration-300 relative group`}
             >
-              About Us
+              About us
+              <div
+                className={`absolute bottom-0 left-0 w-full h-0.5 bg-[#2596be] transform origin-left transition-transform duration-300 ${
+                  isAbout ? "scale-x-100" : "scale-x-0"
+                } group-hover:scale-x-100`}
+              />
             </Link>
           </div>
           <div className="flex justify-center items-center"></div>

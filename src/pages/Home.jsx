@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { COLORS } from "../constants/config";
 import { Link } from "react-router-dom";
 
-import question from "../assets/question.png";
+import question from "../assets/Cloud.png";
 import {
   Clock,
   Cloud,
@@ -22,6 +22,7 @@ import {
   BarChart3,
   MessageSquare,
 } from "lucide-react";
+import { BiCctv } from "react-icons/bi"; // BiCctv is from react-icons/bi (BoxIcons)
 
 import {
   HandshakeIcon,
@@ -55,17 +56,17 @@ const features = [
 
 const steps = [
   {
-    icon: <Camera className="w-16 h-16 text-gray-700" />,
+    icon: <BiCctv className="w-16 h-16 text-gray-700" />,
     title: "Connect CCTV",
     description: "Connect to exiting CCTV infrastructure",
   },
   {
-    icon: <Cpu className="w-16 h-16 text-blue-500" />,
+    icon: <Cpu className="w-16 h-16 text-[#2596be]" />,
     title: "Process Video",
     description: "Video feed is processed through AI-powered analytics",
   },
   {
-    icon: <MessageSquare className="w-16 h-16 text-blue-400" />,
+    icon: <MessageSquare className="w-16 h-16 text-[#2596be]" />,
     title: "Real-Time Alerts",
     description: "Follow up on notifications to ensure smooth operations",
     subStep: {
@@ -123,6 +124,11 @@ const Home = () => {
       bgColor: "bg-[#023357]",
       imgSrc: "path/to/visionagent-image.jpg",
     },
+    {
+      label: "Attendify",
+      bgColor: "bg-[#023357]",
+      imgSrc: "path/to/visionagent-image.jpg",
+    },
   ];
 
   // const slideData = [
@@ -139,7 +145,7 @@ const Home = () => {
         style={{ backgroundColor: COLORS.background, color: COLORS.text }}
       >
         <div
-          className="w-full h-auto flex lg:flex-row flex-col justify-center items-center"
+          className="w-full h-auto flex lg:flex-row flex-col justify-center items-center mb-16"
           style={{ backgroundColor: COLORS.background, color: COLORS.text }}
         >
           {/* Left Section */}
@@ -152,7 +158,7 @@ const Home = () => {
             <div className="flex w-full h-full items-center">
               <img
                 className="object-contain w-full h-full"
-                src="/1.png"
+                src="/2.png"
                 alt=""
               />
             </div>
@@ -172,25 +178,20 @@ const Home = () => {
                     Redefining Vision
                   </span>
                 </h1>
-                <h1 className="text-7xl lg:text-8xl font-bold">
-                  <span className="bg-gradient-to-r from-blue-text to-green-text bg-clip-text text-transparent">
-                    With AI
-                  </span>
+                <h1 className="text-6xl lg:text-8xl font-bold">
+                  <span className={`${COLORS.title_color}`}>With AI</span>
                 </h1>
               </div>
               <div
                 className="text-2xl text-nowrap text-center font-bold"
                 style={{ color: COLORS.text }}
               >
-                Unlock insights from visuals with custom computer
-                <br /> vision solutions
+                Unlock Business Potential with AI-Powered Video
+                <br /> Analytics
               </div>
               <div className="flex gap-x-4 lg:gap-x-8">
-                <button className="bg-blue-500 text-white font-bold text-center px-6 py-1.5 rounded-r-full rounded-l-full">
+                <button className="bg-[#2596be] text-white font-bold text-center px-6 py-1.5 rounded-r-full rounded-l-full">
                   Start Your Vision
-                </button>
-                <button className="bg-gray-500 text-white font-bold text-center px-6 py-1.5 rounded-r-full rounded-l-full">
-                  See It in Action
                 </button>
               </div>
             </div>
@@ -206,7 +207,7 @@ const Home = () => {
             <div className="flex w-full h-full items-center">
               <img
                 className="object-contain w-full h-full"
-                src="/2.png"
+                src="/1.png"
                 alt=""
               />
             </div>
@@ -214,31 +215,66 @@ const Home = () => {
         </div>
 
         <div
-          className=" p-12 lg:p-16 flex flex-col gap-8 animate-fadeIn"
-          style={{ backgroundColor: COLORS.background }}
+          className={`${COLORS.secondaryBackground} p-12 lg:p-16 lg:pb-1 flex flex-col gap-8 animate-fadeIn mb-10`}
         >
           {/* Section of arrows */}
           <div className="mb-18">
-            <div className="-ml-4 flex mb-8 ">
-              <div className="text-white w-1 bg-gradient-to-b from-blue-text to-green-text "></div>
-              <div
-                className="ml-4 text-2xl lg:text-4xl font-semibold"
-                style={{ color: COLORS.text }}
-              >
-                <h1>Monetize Your Video Surveillance Data</h1>
-              </div>
+            <div className="flex flex-col items-center justify-center px-4  text-center">
+              <h1 className="text-5xl font-bold text-gray-800 mb-4  text-[#2596be]">
+                <span>Every </span>
+                <span className="relative inline-block">
+                  <span className="text-[#2596be]">Business </span>
+                  <span
+                    className="absolute bottom-0 left-0 w-full"
+                    style={{
+                      height: "2px",
+                      background: "#2596be",
+                      transform: "rotate(-1deg)",
+                      transformOrigin: "left bottom",
+                    }}
+                  />
+                  <span
+                    className="absolute bottom-0 left-0 w-full"
+                    style={{
+                      height: "1px",
+                      background:
+                        "linear-gradient(90deg, #93c5fd 0%, #bfdbfe 50%, #93c5fd 100%)",
+                      transform: "rotate(-2deg) translateY(2px)",
+                      transformOrigin: "left bottom",
+                      opacity: 0.7,
+                    }}
+                  />
+                </span>
+                <span> is Unique</span>
+              </h1>
             </div>
-            <p>
-              Transform your exiting video surveillance data into a powerful
-              business asset. Use your existing IP security camera setup into
-              actionable insights that can drive business efficiency, enhance
-              operation excellence, and uncover new revenue opportunities. We
-              design AI-powered analytics based on your business needs that help
-              you to build data-driven strategies for growth. Whether you’re in
-              retail, logistics, or any other industry, we help you maximize the
-              potential of your monitoring systems. With DevelMo, your
-              surveillance data will becomes a strategic advantage for smarter
-              decision-making and operational excellence
+
+            <p className="lg:text-lg leading-relaxed">
+              Transform your existing{" "}
+              <span className="text-[#2596be] font-semibold">
+                video surveillance data
+              </span>{" "}
+              into a powerful business asset. Use your existing IP security
+              camera setup to gain actionable insights that can drive
+              <span className="text-[#2596be] font-semibold">
+                {" "}
+                business efficiency
+              </span>
+              , enhance operational excellence, and uncover new revenue
+              opportunities.
+            </p>
+            <p className="lg:text-lg mt-1 leading-relaxed">
+              We design{" "}
+              <span className="text-[#2596be] font-semibold">
+                AI-powered analytics
+              </span>{" "}
+              based on your business needs to help you build data-driven
+              strategies for growth. Whether you’re in retail, logistics, or any
+              other industry, we help you maximize the potential of your
+              monitoring systems. With{" "}
+              <span className="text-[#2596be] font-semibold">DevelMo</span>,
+              your surveillance data becomes a strategic advantage for smarter
+              decision-making and operational excellence.
             </p>
 
             <div className="container mx-auto px-4 py-8">
@@ -260,10 +296,10 @@ const Home = () => {
 
                       {step.subStep && (
                         <div className="flex flex-col items-center text-center max-w-xs mt-8">
-                          <div className="bg-gray-100 rounded-lg p-6 mb-4">
+                          <div className="bg-gray-100 rounded-lg p-6 mb-2">
                             {step.subStep.icon}
                           </div>
-                          <h3 className="text-xl font-bold mb-2 text-gray-800">
+                          <h3 className="text-xl font-bold mb-1 text-gray-800">
                             {step.subStep.title}
                           </h3>
                           <p className="text-gray-600 text-sm">
@@ -274,7 +310,7 @@ const Home = () => {
                     </div>
 
                     {index < steps.length - 1 && (
-                      <ArrowRight className="w-8 h-8 text-blue-500 hidden md:block" />
+                      <ArrowRight className="w-8 h-8 text-[#2596be] hidden md:block" />
                     )}
                   </React.Fragment>
                 ))}
@@ -285,7 +321,7 @@ const Home = () => {
 
         {/* Video Section */}
         <div
-          className=" py-6"
+          className=" py-6 mb-12"
           style={{ backgroundColor: COLORS.background, color: COLORS.text }}
         >
           <div className="flex flex-col gap-y-3 justify-center items-center">
@@ -351,17 +387,41 @@ const Home = () => {
           </div>
         </div>
 
-        <div className=" p-12 lg:p-16 flex flex-col  animate-fadeIn">
-          <div className="-ml-4 flex mb-8 ">
-            <div className="text-white w-1 bg-gradient-to-b from-blue-text to-green-text "></div>
-            <div
-              className="ml-4 text-2xl lg:text-4xl font-semibold"
-              style={{ color: COLORS.text }}
-            >
-              <h1>Every Business is Unique!</h1>
+        <div
+          className={`${COLORS.secondaryBackground} p-12 lg:p-16 flex flex-col  animate-fadeIn mb-16 mt-4`}
+        >
+          <div className="flex justify-center -ml-4 flex  text-center">
+            <div className="flex flex-col items-center justify-center px-4  text-center">
+              <h1 className="text-5xl font-bold text-gray-800 mb-4  text-[#2596be] text-center ">
+                <span>Your </span>
+                <span className="relative inline-block">
+                  <span className="text-[#2596be]">Business </span>
+                  <span
+                    className="absolute bottom-0 left-0 w-full"
+                    style={{
+                      height: "2px",
+                      background: "#2596be",
+                      transform: "rotate(-1deg)",
+                      transformOrigin: "left bottom",
+                    }}
+                  />
+                  <span
+                    className="absolute bottom-0 left-0 w-full"
+                    style={{
+                      height: "1px",
+                      background:
+                        "linear-gradient(90deg, #93c5fd 0%, #bfdbfe 50%, #93c5fd 100%)",
+                      transform: "rotate(-2deg) translateY(2px)",
+                      transformOrigin: "left bottom",
+                      opacity: 0.7,
+                    }}
+                  />
+                </span>
+                <span> is Unique</span>
+              </h1>
             </div>
           </div>
-          <p>
+          <p className="lg:text-lg">
             At DevelMo, we understand that every business has unique needs. Our
             customized AI video analytics solutions are tailored to align with
             your specific requirements, ensuring maximum impact and efficiency.
@@ -369,17 +429,12 @@ const Home = () => {
             your operations.
           </p>
 
-          <div
-            className={`ml-4 mt-8 text-2xl lg:text-3xl font-semibold flex justify-center ${COLORS.title_color}`}
-          >
-            <h1>Implementation Frame work for your Unique Product</h1>
-          </div>
-          <div className="container mx-auto px-4 py-12">
+          <div className="container mx-auto px-4 py-4">
             <div className="flex flex-col md:flex-row items-center justify-between gap-4">
               {steps.map((step, index) => (
                 <React.Fragment key={index}>
                   <div className="w-64 relative group">
-                    <div className="bg-gray-900/5 backdrop-blur-sm p-6 rounded-xl shadow-lg  hover:shadow-xl transition-all duration-300 ">
+                    <div className="bg-white backdrop-blur-sm p-6 rounded-xl shadow-md  hover:shadow-xl transition-all duration-300 ">
                       <div className="flex flex-col items-center gap-4">
                         <div className="bg-white p-4 rounded-full shadow-md">
                           {step.icon}
@@ -402,7 +457,7 @@ const Home = () => {
               ))}
             </div>
           </div>
-          <p>
+          <p className="lg:text-lg">
             This structured approach guarantees that our AI video analytics
             solutions are customized to meet your specific requirements, driving
             operational excellence and informed decision-making
@@ -417,14 +472,14 @@ const Home = () => {
       >
         <div>
           <div className="et_pb_text_inner">
-            <h3 className="text-3xl  lg:text-5xl font-semibold">
-              <span className={`${COLORS.title_color}`}>
+            <h3 className="text-3xl  lg:text-5xl font-semibold text-center">
+              <span className={`${COLORS.title_color} `}>
                 Accelerate your business with Our off-the-shelf AI-Powered
                 products
               </span>
             </h3>
           </div>
-          <div className="flex px-0 lg:px-5 gap-x-4 mt-6">
+          <div className="flex justify-center px-0 lg:px-5 gap-x-4 mt-6">
             {buttonData.map((button, index) => (
               <button
                 key={index}
@@ -615,24 +670,106 @@ const Home = () => {
                 </div>
               </div>
             )}
+            {activeButton === "Attendify" && (
+              <div className="flex lg:flex-row flex-col w-full lg:w-auto gap-x-8 py-8 justify-center">
+                <div className="text-4xl font-semibold  w-full lg:w-1/2 text-white">
+                  <div className="-ml-4 flex ">
+                    <div className="text-white w-1 bg-gradient-to-b from-blue-text to-green-text "></div>
+                    <div
+                      className="ml-4 text-2xl lg:text-4xl"
+                      style={{ color: COLORS.text }}
+                    >
+                      <h1>Transforming Attendance Management with Attendify</h1>
+                    </div>
+                  </div>
+                  <div
+                    className="flex flex-col gap-y-2 py-4 mt-4"
+                    style={{ color: COLORS.text }}
+                  >
+                    {/* First Item */}
+                    <div className="flex justify-center items-start">
+                      <Zap className="mr-2 text-3xl text-[#2596be]" />{" "}
+                      {/* Zap icon for Accelerated MLOps */}
+                      <div
+                        className="text-white font-light text-lg"
+                        style={{ color: COLORS.text }}
+                      >
+                        <span className="font-bold">
+                          AI-Driven Student Recognition:
+                        </span>{" "}
+                        Identifies students using facial recognition,
+                        eliminating manual attendance processes.
+                      </div>
+                    </div>
+
+                    {/* Second Item */}
+                    <div className="flex justify-center items-start">
+                      <Zap className="mr-2 text-3xl text-[#2596be]" />{" "}
+                      {/* Zap icon for Accelerated MLOps */}
+                      <div
+                        className="text-white font-light text-lg"
+                        style={{ color: COLORS.text }}
+                      >
+                        <span className="font-bold">
+                          {" "}
+                          Instant Attendance Records:
+                        </span>{" "}
+                        Automatically logs attendance into the database,
+                        ensuring accuracy and saving valuable class time.
+                      </div>
+                    </div>
+
+                    {/* Third Item */}
+                    <div className="flex justify-center items-start">
+                      <Zap className="mr-2 text-3xl text-[#2596be]" />{" "}
+                      {/* Zap icon for Accelerated MLOps */}
+                      <div
+                        className="text-white font-light text-lg"
+                        style={{ color: COLORS.text }}
+                      >
+                        <span className="font-bold">
+                          {" "}
+                          Comprehensive Attendance Insights:
+                        </span>{" "}
+                        Generates reports, helping educators maintain attendance
+                        compliance effortlessly.
+                      </div>
+                    </div>
+                  </div>
+                  <div className="flex justify-center items-center lg:justify-start lg:items-start mt-6 gap-x-6">
+                    <button className="block px-4 py-1 text-base bg-[#031223] border-[1px]  border-white rounded-l-full rounded-r-full text-center text-white">
+                      Learn More
+                    </button>
+                  </div>
+                </div>
+                <div className="text-5xl w-full lg:w-1/2 mt-12 lg:mt-0 text-white">
+                  <div>
+                    <img
+                      className="object-cover w-full h-full"
+                      src="/crowd-1.png"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </div>
 
       <div
-        className=" p-12 lg:p-16 flex flex-col gap-8 animate-fadeIn"
-        style={{ backgroundColor: COLORS.background }}
+        className={` p-12 lg:p-16 flex flex-col gap-8 animate-fadeIn ${COLORS.secondaryBackground}`}
       >
         <div
           style={{
             color: COLORS.text,
           }}
-          className="flex flex-col lg:flex-row items-center justify-center gap-8 px-4 py-12 lg:py-4 text-white"
+          className="flex flex-col lg:flex-row items-center justify-center gap-8 px-4 py-8 lg:py-4 text-white"
           initial="hidden"
         >
-          <div className="w-full lg:w-1/2 max-w-2xl">
+          <div className="w-full lg:w-1/3 max-w-xl">
             <img
-              className="object-cover w-full max-h-[80vh] sm:max-h-[60vh] lg:max-h-[50vh] xl:max-h-[40vh] rounded-xl"
+              className="object-cover w-full max-h-[80vh] sm:max-h-[80vh] lg:max-h-[45vh] xl:max-h-[45vh] rounded-xl"
               src={question} // Change this to the path of your video
               alt="Visual Prompting Interface Video"
             />
@@ -643,17 +780,17 @@ const Home = () => {
               <CheckCircle2
                 className={`${COLORS.title_color} w-6 h-6 mr-2 flex-shrink-0`}
               />
-              <p className="text-lg mb-4 text-center lg:text-left">
+              <p className="text-lg mb-2 text-center lg:text-left">
                 Capitalize on your edge
               </p>
             </div>
-            <h3 className="text-3xl lg:text-5xl font-semibold mb-6 text-center lg:text-left">
+            <h3 className="text-3xl lg:text-5xl font-semibold mb-4 text-center lg:text-left">
               <span className={`${COLORS.title_color} font-bold`}>
                 Why Edge Computing?
               </span>
             </h3>
 
-            <p className="text-lg mb-8 text-center lg:text-left">
+            <p className="text-lg mb-4 text-center lg:text-left">
               Capitalize on your edge and drive innovation with DevelMo edge
               computing low latency applications
             </p>
@@ -661,15 +798,15 @@ const Home = () => {
             <ul className="space-y-4 mb-8">
               {bulletPoints.map((item, index) => (
                 <li key={index} className="flex items-start">
-                  <CheckCircle2 className="w-6 h-6 mr-2 flex-shrink-0 text-blue-400" />
-                  <span>{item}</span>
+                  <CheckCircle2 className="w-8 h-8 mr-2 flex-shrink-0 text-blue-400" />
+                  <span className="lg:text-lg">{item}</span>
                 </li>
               ))}
             </ul>
           </div>
         </div>
 
-        <div className="bg-blue-500 py-16 px-4">
+        <div className={`${COLORS.titel_bg} py-16 px-4`}>
           <div className="container mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {features.map((feature, index) => (
@@ -678,7 +815,7 @@ const Home = () => {
                   className="flex flex-col items-center text-center text-white"
                 >
                   <div className="mb-6">{feature.icon}</div>
-                  <h3 className="text-xl font-semibold mb-4">
+                  <h3 className="text-xl font-semibold mb-1">
                     {feature.title}
                   </h3>
                   <p className="text-white/90">{feature.description}</p>
@@ -690,24 +827,41 @@ const Home = () => {
 
         <div className="mt-28 mb-20 flex flex-col md:flex-row items-center justify-between space-y-8 md:space-y-0">
           <div className="flex-1 text-center md:text-left">
-            <p className="text-lg text-gray-800 leading-relaxed">
-              AI applications requiring real-time performance leverage
-              pretrained models and local GPU processing at edge data centers.
-              Pretrained models, fine-tuned for specific tasks, enable rapid
-              deployment and efficient inference while reducing the need for
-              intensive model training on-site. By processing data closer to the
-              source, edge data centers minimize latency, enhance
-              responsiveness, and deliver secure, scalable AI solutions for
-              applications like autonomous systems, IoT devices, and smart
-              industries.
+            <h2 className="text-2xl lg:text-3xl font-bold text-[#2596be] mb-4">
+              Unlock the Power of Your Surveillance Data
+            </h2>
+            <p className="lg:text-lg leading-relaxed">
+              Transform your existing{" "}
+              <span className="text-[#2596be] font-semibold">
+                video surveillance data
+              </span>{" "}
+              into a powerful business asset. Use your existing IP security
+              camera setup to gain actionable insights that can drive business
+              efficiency, enhance operational excellence , and uncover new
+              revenue opportunities.
+            </p>
+            <p className="lg:text-lg mt-4 leading-relaxed">
+              We design AI-powered analytics based on your business needs,
+              helping you build{" "}
+              <span className="text-[#2596be] font-semibold">
+                data-driven strategies
+              </span>{" "}
+              for growth. Whether you’re in retail, logistics, or any other
+              industry, we help you maximize the potential of your monitoring
+              systems.
+            </p>
+            <p className="lg:text-lg mt-4 leading-relaxed">
+              With <span className="text-[#2596be] font-semibold">DevelMo</span>
+              , your surveillance data becomes a strategic advantage for smarter
+              decision-making and operational excellence .
             </p>
           </div>
 
           <div className="flex-1">
             <img
-              src="/edgecomputing.png"
+              src="/cloud-3.png"
               alt="Edge Computing"
-              className="w-full h-auto rounded-lg shadow-lg object-cover"
+              className="w-full h-fit rounded-lg object-cover"
             />
           </div>
         </div>
@@ -738,6 +892,9 @@ const Home = () => {
               </li>
               <li className="text-white border-t border-gray-700 pt-3">
                 <Link to="/crowd">CrowdIQ</Link>
+              </li>
+              <li className="text-white border-t border-gray-700 pt-3">
+                <Link to="/attendify">Attendify</Link>
               </li>
             </ul>
           </div>

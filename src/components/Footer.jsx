@@ -21,7 +21,7 @@ function Footer() {
             <h3 className="text-lg font-semibold mb-4">About Us</h3>
             <ul className="space-y-2">
               {[
-                { name: "Our Vision", link: "/build-your-vision" },
+                { name: "About Us", link: "/about" },
                 { name: "Contact Us", link: "/build-your-vision" },
                 { name: "Industry", link: "/industry" },
               ].map((item) => (
@@ -44,6 +44,7 @@ function Footer() {
               {[
                 { name: "CrowdIQ", link: "/crowdiq" },
                 { name: "OmniRoad 2.0", link: "/omniroad" },
+                { name: "Attendify", link: "/attendify" },
               ].map((item) => (
                 <li key={item.name}>
                   <a
@@ -61,7 +62,7 @@ function Footer() {
             <h1 className="text-lg font-semibold"> Follow us on</h1>
             <div className="flex  mt-6 space-x-6">
               <a
-                href="https://facebook.com"
+                href=" https://www.facebook.com/profile.php?id=61570805382653"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white"
@@ -69,7 +70,7 @@ function Footer() {
                 <Facebook size={24} />
               </a>
               <a
-                href="https://twitter.com"
+                href="https://x.com/DevelMoTech"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white"
@@ -77,7 +78,7 @@ function Footer() {
                 <Twitter size={24} />
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/company/104610798/admin/dashboard/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white"
@@ -94,7 +95,7 @@ function Footer() {
                 <Instagram size={24} />
               </a>
               <a
-                href="https://youtube.com"
+                href="https://www.youtube.com/channel/UCsBaWGExDrTzrOMYJ_s2CXg"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white"

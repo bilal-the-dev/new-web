@@ -94,3 +94,75 @@
                 </div>
               </div>
             )}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             <motion.div
+        className={`${COLORS.secondaryBackground} text-black flex flex-col lg:flex-row items-center justify-center gap-8 px-4 py-12 lg:py-16 text-white`} // `justify-between` for space between
+        initial="hidden"
+        animate="visible"
+        variants={fadeIn}
+      >
+        <motion.div className="w-full lg:w-1/2 max-w-2xl" variants={slideIn}>
+          <motion.h2 className="text-2xl font-bold mb-4" variants={slideIn}>
+            {pageContent.dataCentricAI.title}
+          </motion.h2>
+          <motion.h1 className="text-4xl font-bold mb-6" variants={slideIn}>
+            {pageContent.dataCentricAI.heading}
+          </motion.h1>
+          <motion.p className="mb-4" variants={slideIn}>
+            {pageContent.dataCentricAI.description}
+          </motion.p>
+          <motion.ul className="space-y-2" variants={slideIn}>
+            {pageContent.dataCentricAI.bulletPoints.map((point, index) => (
+              <motion.li
+                key={index}
+                className="flex items-start"
+                variants={slideIn}
+              >
+                <CheckCircle2 className="mr-2 flex-shrink-0 mt-1" size={20} />
+                <span>{point}</span>
+              </motion.li>
+            ))}
+          </motion.ul>
+          <motion.button
+            className={`${COLORS.title_color} mt-6 bg-white px-6 py-2 rounded-full font-semibold`}
+            variants={slideIn}
+          >
+            {pageContent.dataCentricAI.buttonText}
+          </motion.button>
+        </motion.div>
+        {/* Adjust padding for spacing */}
+        <motion.div className="w-full lg:w-1/3 max-w-xs" variants={slideIn}>
+          <img
+            src={pageContent.dataCentricAI.images}
+            alt="Visual Prompting Interface"
+            className="w-full h-auto rounded-lg"
+          />
+        </motion.div>
+      </motion.div>
