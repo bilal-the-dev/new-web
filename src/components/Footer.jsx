@@ -12,7 +12,7 @@ function Footer() {
               <span className="text-xl font-bold">DevelMo</span>
             </div>
             <p className="text-sm text-gray-400">
-              © 2024 DevelMo ltd All rights reserved.
+              © 2024 DevelMo Ltd All rights reserved.
             </p>
           </div>
 

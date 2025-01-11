@@ -203,9 +203,9 @@ const HeroSection = () => {
             Unlock the potential of AI-powered computer vision to drive
             innovation in your industry
           </h2>
-          <div className="flex">
+          <div className="flex flex-wrap justify-center gap-4">
             <motion.button
-              className={`${COLORS.titel_bg} text-white px-8 py-3 rounded-lg flex items-center gap-2 mx-auto hover:bg-blue-700 transition-colors`}
+              className={`${COLORS.titel_bg} text-white px-8 py-3 rounded-lg flex items-center gap-2 mx-auto w-full sm:w-auto hover:bg-blue-700 transition-colors`}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -213,7 +213,7 @@ const HeroSection = () => {
               <ArrowRight size={20} />
             </motion.button>
             <motion.button
-              className={`${COLORS.titel_bg} text-white px-8 py-3 rounded-lg flex items-center gap-2 mx-auto hover:bg-blue-700 transition-colors`}
+              className={`${COLORS.titel_bg} text-white px-8 py-3 rounded-lg flex items-center gap-2 mx-auto w-full sm:w-auto hover:bg-blue-700 transition-colors`}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >

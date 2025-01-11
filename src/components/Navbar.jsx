@@ -30,7 +30,7 @@ const Navbar = () => {
     },
     {
       icon: "",
-      title: "CrowIQ",
+      title: "CrowdIQ",
       path: "/crowdiq",
     },
     {
@@ -56,12 +56,12 @@ const Navbar = () => {
   return (
     <header className="relative">
       <nav
-        className={`w-full justify-between items-center flex p-8 ${
+        className={`w-full justify-between items-center flex p-8  ${
           isProductPage ? "bg-[#fffff]" : "bg-[#031223]"
-        }`}
+        } border-2 border-gray-100 border-solid`}
       >
         <div className="logo">
-          <img src="/logo.png" className="h-20 w-20" alt="" />
+          <img src="/logo-10.png" className="h-8 w-22" alt="" />
         </div>
         <div className="hidden lg:flex lg:text-lg gap-x-8 xl:text-xl font-semibold text-white ml-24">
           <div className="flex flex-col items-center">

@@ -12,6 +12,7 @@ import {
   Zap,
   Repeat,
   Calendar,
+  ChevronRight,
   CheckCircle2,
 } from "lucide-react";
 
@@ -20,6 +21,7 @@ import {
   Camera,
   Cpu,
   BarChart3,
+  Box,
   MessageSquare,
 } from "lucide-react";
 import { BiCctv } from "react-icons/bi"; // BiCctv is from react-icons/bi (BoxIcons)
@@ -28,6 +30,7 @@ import {
   HandshakeIcon,
   Settings2,
   ClipboardCheck,
+  Users,
   Monitor,
 } from "lucide-react";
 
@@ -74,6 +77,27 @@ const steps = [
       title: "Analyze Trends",
       description: "Understand if your action plans are working effectively",
     },
+  },
+];
+
+const products = [
+  {
+    name: "OmniRoad 2.0",
+    path: "/omniroad",
+    icon: <Box className="w-5 h-5" />,
+    description: "Intelligent traffic management solution",
+  },
+  {
+    name: "CrowdIQ",
+    path: "/crowd",
+    icon: <Users className="w-5 h-5" />,
+    description: "Advanced crowd analytics platform",
+  },
+  {
+    name: "Attendify",
+    path: "/attendify",
+    icon: <Calendar className="w-5 h-5" />,
+    description: "Smart attendance tracking system",
   },
 ];
 
@@ -190,9 +214,11 @@ const Home = () => {
                 <br /> Analytics
               </div>
               <div className="flex gap-x-4 lg:gap-x-8">
-                <button className="bg-[#2596be] text-white font-bold text-center px-6 py-1.5 rounded-r-full rounded-l-full">
-                  Start Your Vision
-                </button>
+                <Link to="/build-your-vision">
+                  <button className="bg-[#2596be] text-white font-bold text-center px-6 py-1.5 rounded-r-full rounded-l-full">
+                    Start Your Vision
+                  </button>
+                </Link>
               </div>
             </div>
           </motion.div>
@@ -254,27 +280,27 @@ const Home = () => {
               <span className="text-[#2596be] font-semibold">
                 video surveillance data
               </span>{" "}
-              into a powerful business asset. Use your existing IP security
-              camera setup to gain actionable insights that can drive
+              into a powerful business asset. Leverage your current IP security
+              camera setup to gain actionable insights that can drive{" "}
               <span className="text-[#2596be] font-semibold">
-                {" "}
                 business efficiency
               </span>
               , enhance operational excellence, and uncover new revenue
               opportunities.
             </p>
-            <p className="lg:text-lg mt-1 leading-relaxed">
+
+            <p className="lg:text-lg mt-4 leading-relaxed">
               We design{" "}
               <span className="text-[#2596be] font-semibold">
                 AI-powered analytics
               </span>{" "}
-              based on your business needs to help you build data-driven
-              strategies for growth. Whether you’re in retail, logistics, or any
-              other industry, we help you maximize the potential of your
+              tailored to your business needs, helping you build data-driven
+              strategies for growth. Whether you're in retail, logistics, or any
+              other industry, we empower you to maximize the potential of your
               monitoring systems. With{" "}
               <span className="text-[#2596be] font-semibold">DevelMo</span>,
-              your surveillance data becomes a strategic advantage for smarter
-              decision-making and operational excellence.
+              your surveillance data becomes a strategic advantage, enabling
+              smarter decision-making and operational excellence.
             </p>
 
             <div className="container mx-auto px-4 py-8">
@@ -566,9 +592,11 @@ const Home = () => {
                     </div>
                   </div>
                   <div className="flex justify-center items-center lg:justify-start lg:items-start mt-6 gap-x-6">
-                    <button className="block px-4 py-1 text-base bg-[#031223] border-[1px]  border-white rounded-l-full rounded-r-full text-center text-white">
-                      Learn More
-                    </button>
+                    <Link to="/omniroad">
+                      <button className="block px-4 py-1 text-base bg-[#031223] border-[1px] border-white rounded-l-full rounded-r-full text-center text-white">
+                        Learn More
+                      </button>
+                    </Link>
                   </div>
                 </div>
                 <div className="text-5xl w-full lg:w-1/2 mt-12 lg:mt-0 text-white">
@@ -654,16 +682,18 @@ const Home = () => {
                     </div>
                   </div>
                   <div className="flex justify-center items-center lg:justify-start lg:items-start mt-6 gap-x-6">
-                    <button className="block px-4 py-1 text-base bg-[#031223] border-[1px]  border-white rounded-l-full rounded-r-full text-center text-white">
-                      Learn More
-                    </button>
+                    <Link to="/crowdiq">
+                      <button className="block px-4 py-1 text-base bg-[#031223] border-[1px] border-white rounded-l-full rounded-r-full text-center text-white">
+                        Learn More
+                      </button>
+                    </Link>
                   </div>
                 </div>
                 <div className="text-5xl w-full lg:w-1/2 mt-12 lg:mt-0 text-white">
                   <div>
                     <img
                       className="object-cover w-full h-full"
-                      src="/crowd-1.png"
+                      src="/crowd-2.png"
                       alt=""
                     />
                   </div>
@@ -737,16 +767,18 @@ const Home = () => {
                     </div>
                   </div>
                   <div className="flex justify-center items-center lg:justify-start lg:items-start mt-6 gap-x-6">
-                    <button className="block px-4 py-1 text-base bg-[#031223] border-[1px]  border-white rounded-l-full rounded-r-full text-center text-white">
-                      Learn More
-                    </button>
+                    <Link to="/attendify">
+                      <button className="block px-4 py-1 text-base bg-[#031223] border-[1px] border-white rounded-l-full rounded-r-full text-center text-white">
+                        Learn More
+                      </button>
+                    </Link>
                   </div>
                 </div>
                 <div className="text-5xl w-full lg:w-1/2 mt-12 lg:mt-0 text-white">
                   <div>
                     <img
                       className="object-cover w-full h-full"
-                      src="/crowd-1.png"
+                      src="/attendify-1.png"
                       alt=""
                     />
                   </div>
@@ -865,38 +897,69 @@ const Home = () => {
             />
           </div>
         </div>
-
+      </div>
+      <div className="container mx-auto px-4 py-12">
         <div className="flex flex-col lg:flex-row gap-8">
-          <div className="bg-gradient-to-br from-blue-500 to-green-400 rounded-lg p-8 flex-1 transition-transform transform hover:scale-105 animate-fadeIn">
-            <div className="text-center">
-              <h1 className="text-white text-4xl md:text-5xl font-bold mb-8">
-                Get Your Custom Computer Vision Solution Delivered
-              </h1>
-              <div className="flex flex-col sm:flex-row justify-center gap-4">
-                <button className="bg-white text-blue-500 font-semibold py-2 px-6 rounded-full hover:bg-opacity-90 transition-colors duration-300">
-                  Try CrowdIQ
-                </button>
-                <button className="bg-transparent text-white font-semibold py-2 px-6 rounded-full border-2 border-white hover:bg-white hover:text-blue-500 transition-colors duration-300">
-                  Get a Demo
-                </button>
+          {/* Hero CTA Section */}
+          <div className="lg:flex-1">
+            <div className="bg-gradient-to-br from-blue-500 to-green-400 rounded-xl p-8 h-full transition-transform duration-300 hover:scale-105 shadow-xl">
+              <div className="flex flex-col justify-center h-full text-center lg:py-8">
+                <h1 className="text-white text-4xl lg:text-5xl font-bold mb-8 leading-tight">
+                  Get Your Custom Computer Vision Solution Delivered
+                </h1>
+                <div className="flex flex-col sm:flex-row justify-center gap-4">
+                  <button className="bg-white text-blue-500 font-semibold py-3 px-8 rounded-full hover:bg-opacity-90 transition-colors duration-300 shadow-lg">
+                    Try CrowdIQ
+                  </button>
+                  <button className="bg-transparent text-white font-semibold py-3 px-8 rounded-full border-2 border-white hover:bg-white hover:text-blue-500 transition-colors duration-300">
+                    Get a Demo
+                  </button>
+                </div>
               </div>
             </div>
           </div>
-          <div className="bg-gray-800 rounded-lg p-6 lg:w-1/3 animate-fadeIn">
-            <h2 className="text-blue-300 text-xl font-semibold mb-10">
-              Explore Our Products
-            </h2>
-            <ul className="space-y-3">
-              <li className="text-white border-t border-gray-700 pt-3">
-                <Link to="/omniroad">OmniRoad 2.0</Link>
-              </li>
-              <li className="text-white border-t border-gray-700 pt-3">
-                <Link to="/crowd">CrowdIQ</Link>
-              </li>
-              <li className="text-white border-t border-gray-700 pt-3">
-                <Link to="/attendify">Attendify</Link>
-              </li>
-            </ul>
+
+          {/* Products Section */}
+          <div className="lg:w-2/5 xl:w-1/3">
+            <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-8 h-full shadow-xl">
+              <h2 className="text-blue-300 text-2xl font-semibold mb-8 flex items-center gap-2">
+                <Box className="w-6 h-6" />
+                Explore Our Products
+              </h2>
+
+              <ul className="space-y-4">
+                {products.map((product, index) => (
+                  <li
+                    key={product.name}
+                    className={`relative ${
+                      index !== 0 ? "border-t border-gray-700" : ""
+                    }`}
+                  >
+                    <Link
+                      to={product.path}
+                      className="block hover:bg-gray-700/50 rounded-lg transition-all duration-200 group p-4 mt-2"
+                    >
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center gap-3">
+                          <div className="text-blue-400 group-hover:text-blue-300 transition-colors">
+                            {product.icon}
+                          </div>
+                          <div>
+                            <h3 className="text-white font-medium group-hover:text-blue-300 transition-colors">
+                              {product.name}
+                            </h3>
+                            <p className="text-gray-400 text-sm mt-1">
+                              {product.description}
+                            </p>
+                          </div>
+                        </div>
+                        <ChevronRight className="w-5 h-5 text-gray-400 group-hover:text-blue-300 transform group-hover:translate-x-1 transition-all" />
+                      </div>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </div>

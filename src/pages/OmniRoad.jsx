@@ -79,20 +79,6 @@ const OmniRoad = () => {
             {pageContent.hero.buttonText}
           </button>
         </motion.div>
-        <motion.div
-          className="flex h-full items-center justify-center"
-          variants={fadeIn}
-        >
-          <video
-            className="object-cover w-full max-h-[90vh] sm:max-h-[70vh] lg:max-h-[60vh] xl:max-h-[50vh]"
-            src={pageContent.hero.image} // Change this to the path of your video
-            alt="Hero Video"
-            autoPlay
-            loop
-            muted
-            playsInline
-          />
-        </motion.div>
       </motion.div>
 
       {/* Features Section */}
@@ -106,9 +92,9 @@ const OmniRoad = () => {
         animate="visible"
         variants={fadeIn}
       >
-        <motion.div className="w-full lg:w-1/2 max-w-3xl" variants={slideIn}>
+        <motion.div className="w-full lg:w-1/2 max-w-2xl" variants={slideIn}>
           <video
-            className="w-full h-auto rounded-lg shadow-lg object-cover max-h-[80vh] sm:max-h-[60vh] lg:max-h-[50vh] xl:max-h-[40vh]"
+            className="w-full h-auto rounded-lg  object-cover max-h-[80vh] "
             src={pageContent.feature_1.image} // Change this to the path of your video
             alt="Visual Prompting Interface Video"
             autoPlay

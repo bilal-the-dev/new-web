@@ -244,7 +244,7 @@ const About = () => {
                   <div className="absolute -bottom-6 -right-6 bg-white p-6 rounded-xl shadow-lg border border-gray-100">
                     <div className="grid grid-cols-2 gap-6">
                       <div>
-                        <p className="text-4xl font-bold text-[#2596be]">4+</p>
+                        <p className="text-4xl font-bold text-[#2596be]">3+</p>
                         <p className="text-sm text-gray-600">Global Offices</p>
                       </div>
                       <div>
