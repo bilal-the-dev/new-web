@@ -1,5 +1,6 @@
 import { Facebook, Twitter, Instagram } from "lucide-react";
 import { FaLinkedinIn, FaYoutube } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -26,12 +27,12 @@ function Footer() {
                 { name: "Industry", link: "/industry" },
               ].map((item) => (
                 <li key={item.name}>
-                  <a
-                    href={item.link}
+                  <Link
+                    to={item.link}
                     className="text-sm text-gray-400 hover:text-white"
                   >
                     {item.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -47,12 +48,12 @@ function Footer() {
                 { name: "Attendify", link: "/attendify" },
               ].map((item) => (
                 <li key={item.name}>
-                  <a
-                    href={item.link}
+                  <Link
+                    to={item.link}
                     className="text-sm text-gray-400 hover:text-white"
                   >
                     {item.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
