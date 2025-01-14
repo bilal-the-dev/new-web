@@ -89,7 +89,7 @@ const products = [
   },
   {
     name: "CrowdIQ",
-    path: "/crowd",
+    path: "/crowdiq",
     icon: <Users className="w-5 h-5" />,
     description: "Advanced crowd analytics platform",
   },
@@ -796,23 +796,23 @@ const Home = () => {
           style={{
             color: COLORS.text,
           }}
-          className="flex flex-col lg:flex-row items-center justify-center gap-8 px-4 py-8 lg:py-4 text-white"
+          className={` text-white flex flex-col lg:flex-row items-center justify-center gap-8 px-4`}
           initial="hidden"
         >
-          <div className="w-full lg:w-1/3 max-w-xl">
+          <div className="w-full lg:w-1/2 max-w-2xl">
             <img
-              className="object-cover w-full max-h-[80vh] sm:max-h-[80vh] lg:max-h-[45vh] xl:max-h-[45vh] rounded-xl"
+              className="w-full h-auto rounded-xl"
               src={question} // Change this to the path of your video
               alt="Visual Prompting Interface Video"
             />
           </div>
 
-          <div className="w-full lg:w-1/2 max-w-2xl">
-            <div className="flex">
+          <div className="w-full lg:w-1/2 max-w-2xl h-[45vh] flex flex-col justify-center">
+            <div className="flex items-center mb-4">
               <CheckCircle2
                 className={`${COLORS.title_color} w-6 h-6 mr-2 flex-shrink-0`}
               />
-              <p className="text-lg mb-2 text-center lg:text-left">
+              <p className="text-lg text-center lg:text-left">
                 Capitalize on your edge
               </p>
             </div>
@@ -908,12 +908,17 @@ const Home = () => {
                   Get Your Custom Computer Vision Solution Delivered
                 </h1>
                 <div className="flex flex-col sm:flex-row justify-center gap-4">
-                  <button className="bg-white text-blue-500 font-semibold py-3 px-8 rounded-full hover:bg-opacity-90 transition-colors duration-300 shadow-lg">
-                    Try CrowdIQ
-                  </button>
-                  <button className="bg-transparent text-white font-semibold py-3 px-8 rounded-full border-2 border-white hover:bg-white hover:text-blue-500 transition-colors duration-300">
-                    Get a Demo
-                  </button>
+                  <Link to="/crowdiq">
+                    <button className="bg-white text-blue-500 font-semibold py-3 px-8 rounded-full hover:bg-opacity-90 transition-colors duration-300 shadow-lg">
+                      Try CrowdIQ
+                    </button>
+                  </Link>
+
+                  <Link to="/build-your-vision">
+                    <button className="bg-transparent text-white font-semibold py-3 px-8 rounded-full border-2 border-white hover:bg-white hover:text-blue-500 transition-colors duration-300">
+                      Get a Demo
+                    </button>
+                  </Link>
                 </div>
               </div>
             </div>

@@ -9,6 +9,7 @@ import {
   STATS,
 } from "../constants/industry";
 import { COLORS } from "../constants/config";
+import { Link } from "react-router-dom";
 // Animation variants
 const fadeIn = {
   initial: { opacity: 0, y: 20 },
@@ -204,22 +205,28 @@ const HeroSection = () => {
             innovation in your industry
           </h2>
           <div className="flex flex-wrap justify-center gap-4">
-            <motion.button
-              className={`${COLORS.titel_bg} text-white px-8 py-3 rounded-lg flex items-center gap-2 mx-auto w-full sm:w-auto hover:bg-blue-700 transition-colors`}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Get Started
-              <ArrowRight size={20} />
-            </motion.button>
-            <motion.button
-              className={`${COLORS.titel_bg} text-white px-8 py-3 rounded-lg flex items-center gap-2 mx-auto w-full sm:w-auto hover:bg-blue-700 transition-colors`}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Request a demo
-              <ArrowRight size={20} />
-            </motion.button>
+            <Link to="/build-your-vision">
+              <motion.button
+                className={`${COLORS.titel_bg} text-white px-8 py-3 rounded-lg flex items-center gap-2 mx-auto w-full sm:w-auto hover:bg-blue-700 transition-colors`}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                Get Started
+                <ArrowRight size={20} />
+              </motion.button>
+            </Link>
+
+            {/* Request a Demo Button */}
+            <Link to="/build-your-vision">
+              <motion.button
+                className={`${COLORS.titel_bg} text-white px-8 py-3 rounded-lg flex items-center gap-2 mx-auto w-full sm:w-auto hover:bg-blue-700 transition-colors`}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                Request a Demo
+                <ArrowRight size={20} />
+              </motion.button>
+            </Link>
           </div>
         </motion.div>
       </div>
