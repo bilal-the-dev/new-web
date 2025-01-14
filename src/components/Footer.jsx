@@ -86,15 +86,6 @@ function Footer() {
               >
                 <FaLinkedinIn size={24} />
               </a>
-
-              <a
-                href="https://instagram.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white"
-              >
-                <Instagram size={24} />
-              </a>
               <a
                 href="https://www.youtube.com/channel/UCsBaWGExDrTzrOMYJ_s2CXg"
                 target="_blank"
