@@ -347,7 +347,7 @@ const Home = () => {
 
         {/* Video Section */}
         <div
-          className=" py-6 mb-12"
+          className="py-6 mb-12 hidden lg:block"
           style={{ backgroundColor: COLORS.background, color: COLORS.text }}
         >
           <div className="flex flex-col gap-y-3 justify-center items-center">
@@ -372,27 +372,6 @@ const Home = () => {
               real-time tracking, and more—crafted to extract meaningful
               insights from images, videos, and streams.
             </motion.h4>
-          </div>
-
-          <div className="lg:hidden flex et_pb_code_inner mt-12 justify-center items-center">
-            <motion.video
-              id="miVideo"
-              playsInline
-              autoPlay
-              muted
-              loop
-              className="border border-[#003666] rounded-lg"
-              style={{ border: "1px solid #003666", borderRadius: "16px" }}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-            >
-              <source
-                type="video/mp4"
-                src="https://landing.ai/wp-content/uploads/2024/09/Marketecture-Mobile.mp4"
-              />
-              Your browser does not support the video tag.
-            </motion.video>
           </div>
 
           <div className="hidden lg:flex et_pb_code_inner mt-12 justify-center items-center">
