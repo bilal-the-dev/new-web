@@ -71,7 +71,7 @@ const OmniRoad = () => {
           style={{ color: COLORS.text }}
           variants={slideIn}
         >
-          <Link to="/attendify">
+          <Link to="/build-your-vision">
             <button
               className={`${COLORS.titel_bg} rounded-l-full rounded-r-full px-6 py-2 lg:text-sm xl:text-base`}
               style={{
