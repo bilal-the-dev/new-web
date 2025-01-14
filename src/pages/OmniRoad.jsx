@@ -65,11 +65,7 @@ const OmniRoad = () => {
         <motion.p className="text-center" variants={slideIn}>
           {pageContent.hero.subtitle}
         </motion.p>
-        <motion.div
-          className="hidden lg:block font-bold"
-          style={{ color: COLORS.text }}
-          variants={slideIn}
-        >
+        <Link to="/omniroad">
           <button
             className={`${COLORS.titel_bg} rounded-l-full rounded-r-full px-6 py-2 lg:text-sm xl:text-base`}
             style={{
@@ -78,7 +74,7 @@ const OmniRoad = () => {
           >
             {pageContent.hero.buttonText}
           </button>
-        </motion.div>
+        </Link>
       </motion.div>
 
       {/* Features Section */}

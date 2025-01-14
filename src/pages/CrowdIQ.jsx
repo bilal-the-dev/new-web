@@ -70,14 +70,16 @@ const CrowdIQ = () => {
           style={{ color: COLORS.text }}
           variants={slideIn}
         >
-          <button
-            className={`${COLORS.titel_bg} rounded-l-full rounded-r-full px-6 py-2 lg:text-sm xl:text-base`}
-            style={{
-              color: COLORS.background,
-            }}
-          >
-            {pageContent.hero.buttonText}
-          </button>
+          <Link to="/crowdiq">
+            <button
+              className={`${COLORS.titel_bg} rounded-l-full rounded-r-full px-6 py-2 lg:text-sm xl:text-base`}
+              style={{
+                color: COLORS.background,
+              }}
+            >
+              {pageContent.hero.buttonText}
+            </button>
+          </Link>
         </motion.div>
       </motion.div>
 

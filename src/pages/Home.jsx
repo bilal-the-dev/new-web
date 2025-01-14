@@ -144,7 +144,7 @@ const Home = () => {
       imgSrc: "path/to/landinglens-snowflake-image.jpg",
     },
     {
-      label: "CrowsIQ",
+      label: "CrowdIQ",
       bgColor: "bg-[#023357]",
       imgSrc: "path/to/visionagent-image.jpg",
     },

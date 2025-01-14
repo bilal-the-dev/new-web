@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { motion, steps } from "framer-motion";
-import { CheckCircle2, XCircle, Bell, Cloud, Home } from "lucide-react";
+import { CheckCircle2, XCircle, Bell, Cloud, Home, Link } from "lucide-react";
 import { products } from "../constants/product";
 import AdditionalSections from "../components/AdditionalSections";
 import { Navigate, useParams, useSearchParams } from "react-router-dom";
@@ -71,14 +71,16 @@ const OmniRoad = () => {
           style={{ color: COLORS.text }}
           variants={slideIn}
         >
-          <button
-            className={`${COLORS.titel_bg} rounded-l-full rounded-r-full px-6 py-2 lg:text-sm xl:text-base`}
-            style={{
-              color: COLORS.background,
-            }}
-          >
-            {pageContent.hero.buttonText}
-          </button>
+          <Link to="/attendify">
+            <button
+              className={`${COLORS.titel_bg} rounded-l-full rounded-r-full px-6 py-2 lg:text-sm xl:text-base`}
+              style={{
+                color: COLORS.background,
+              }}
+            >
+              {pageContent.hero.buttonText}
+            </button>
+          </Link>
         </motion.div>
       </motion.div>
 
