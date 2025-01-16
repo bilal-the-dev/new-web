@@ -452,3 +452,5 @@ export const products = {
     },
   },
 };
+
+let i;
