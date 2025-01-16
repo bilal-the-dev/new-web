@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
 import { motion, steps } from "framer-motion";
-import { CheckCircle2, XCircle, Bell, Cloud, Home, Link } from "lucide-react";
+import { CheckCircle2, XCircle, Bell, Cloud, Home } from "lucide-react";
 import { products } from "../constants/product";
 import AdditionalSections from "../components/AdditionalSections";
-import { Navigate, useParams, useSearchParams } from "react-router-dom";
+import { Link, Navigate, useParams, useSearchParams } from "react-router-dom";
 import { COLORS } from "../constants/config";
 import feature1 from "../assets/product/feature-1.gif";
 import AOS from "aos";
@@ -66,22 +66,17 @@ const OmniRoad = () => {
         <motion.p className="text-center" variants={slideIn}>
           {pageContent.hero.subtitle}
         </motion.p>
-        <motion.div
-          className="hidden lg:block font-bold"
-          style={{ color: COLORS.text }}
-          variants={slideIn}
-        >
-          <Link to="/build-your-vision">
-            <button
-              className={`${COLORS.titel_bg} rounded-l-full rounded-r-full px-6 py-2 lg:text-sm xl:text-base`}
-              style={{
-                color: COLORS.background,
-              }}
-            >
-              {pageContent.hero.buttonText}
-            </button>
-          </Link>
-        </motion.div>
+
+        <Link to="/build-your-vision">
+          <button
+            className={`${COLORS.titel_bg} rounded-l-full rounded-r-full px-6 py-2 lg:text-sm xl:text-base`}
+            style={{
+              color: COLORS.background,
+            }}
+          >
+            {pageContent.hero.buttonText}
+          </button>
+        </Link>
       </motion.div>
 
       {/* Features Section */}

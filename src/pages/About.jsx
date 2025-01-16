@@ -368,7 +368,7 @@ const About = () => {
                         href="mailto:shahzebali@develmo.com"
                         className="text-[#2596be] hover:underline"
                       >
-                        shahzebali@develmo.com
+                        careers@develmo.com
                       </a>
                     </div>
                   </div>

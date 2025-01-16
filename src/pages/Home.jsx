@@ -594,7 +594,7 @@ const Home = () => {
               </div>
             )}
 
-            {activeButton === "CrowsIQ" && (
+            {activeButton === "CrowdIQ" && (
               <div className="flex lg:flex-row flex-col w-full lg:w-auto gap-x-8 py-8 justify-center">
                 <div className="text-4xl font-semibold  w-full lg:w-1/2 text-white">
                   <div className="-ml-4 flex ">

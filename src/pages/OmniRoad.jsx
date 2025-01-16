@@ -3,7 +3,7 @@ import { motion, steps } from "framer-motion";
 import { CheckCircle2, XCircle, Bell, Cloud, Home } from "lucide-react";
 import { products } from "../constants/product";
 import AdditionalSections from "../components/AdditionalSections";
-import { Navigate, useParams, useSearchParams } from "react-router-dom";
+import { Link, Navigate, useParams, useSearchParams } from "react-router-dom";
 import { COLORS } from "../constants/config";
 import feature1 from "../assets/product/feature-1.gif";
 import AOS from "aos";
