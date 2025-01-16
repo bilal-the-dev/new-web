@@ -181,82 +181,96 @@ const Navbar = () => {
 
         {/* sidebar */}
         <div
-          className={`block  lg:hidden  w-full p-6 transition-all   bg-[#062446] text-white absolute top-0 z-30  ${
+          className={`block lg:hidden w-full p-6 transition-all bg-black text-white absolute top-0 z-30 ${
             toggle
-              ? " right-0 duration-500 opacity-100  ease-in"
-              : " right-[-100%] opacity-50  duration-300 ease-in-out"
-          }   `}
+              ? "right-0 duration-500 opacity-100 ease-in"
+              : "right-[-100%] opacity-50 duration-300 ease-in-out"
+          }`}
         >
-          <div className="w-full flex justify-between">
-            <div className="logo ">
-              <img src="/logo.png" className="h-16 w-16" alt="" />
-            </div>
-            <RxCross2 onClick={() => settoggle(!toggle)} size={30} />
+          <div className="w-full flex justify-between items-center mb-6">
+            <div className="logo"></div>
+            <RxCross2
+              onClick={() => settoggle(!toggle)}
+              size={30}
+              className="text-white cursor-pointer"
+            />
           </div>
 
-          <hr className="border-[1px] borde-white w-full" />
+          <hr className="border-[1px] border-white w-full mb-6" />
 
-          <div className="text-[#44A0FF]">
-            {/* Product */}
-            <div>
-              <div className="py-5 -ml-2 font-bold">
-                <h1>Product</h1>
-              </div>
-              <div className="px-2 gap-y-8 mt-2 font-semibold text-[16px] leading-tight  flex flex-col">
-                <div className="flex ">
+          <div>
+            {/* Products Section */}
+
+            <div className="flex items-center mb-4">
+              <img
+                className="mr-3 w-5"
+                src="https://landing.ai/wp-content/uploads/2023/12/Validation.svg"
+                alt=""
+              />
+              <Link
+                to="/"
+                className="text-white hover:text-gray-400 transition-all"
+              >
+                Home
+              </Link>
+            </div>
+            <div className="mb-6">
+              <h3 className="text-xl font-semibold mb-4">Products</h3>
+              {["crowdiq", "omniroad", "attendify"].map((link, index) => (
+                <div key={index} className="flex items-center mb-4">
                   <img
-                    className="mr-2 w-5"
+                    className="mr-3 w-5"
                     src="https://landing.ai/wp-content/uploads/2023/12/Validation.svg"
                     alt=""
                   />
-                  <Link to="/crowdiq" activeClassName="text-blue-400">
-                    CrowdIQ
+                  <Link
+                    to={`/${link}`}
+                    className="text-white hover:text-gray-400 transition-all"
+                  >
+                    {link.charAt(0).toUpperCase() + link.slice(1)}
                   </Link>
                 </div>
+              ))}
+            </div>
+
+            {/* Industries Section */}
+            <div className="mb-6">
+              <h3 className="text-xl font-semibold mb-4">Industries</h3>
+              <div className="flex items-center mb-4">
+                <img
+                  className="mr-3 w-5"
+                  src="https://landing.ai/wp-content/uploads/2023/12/Validation.svg"
+                  alt=""
+                />
+                <Link
+                  to="/industry"
+                  className="text-white hover:text-gray-400 transition-all"
+                >
+                  Industry
+                </Link>
               </div>
-              <div className="px-2 gap-y-8 mt-2 font-semibold text-[16px] leading-tight  flex flex-col">
-                <div className="flex ">
+            </div>
+
+            {/* Other Links Section */}
+            <div>
+              <h3 className="text-xl font-semibold mb-4">Other Links</h3>
+              {["about", "build-your-vision"].map((link, index) => (
+                <div key={index} className="flex items-center mb-4">
                   <img
-                    className="mr-2 w-5"
+                    className="mr-3 w-5"
                     src="https://landing.ai/wp-content/uploads/2023/12/Validation.svg"
                     alt=""
                   />
-                  <Link to="/omniroad" activeClassName="text-blue-400">
-                    OmniRoad 2.0
+                  <Link
+                    to={`/${link}`}
+                    className="text-white hover:text-gray-400 transition-all"
+                  >
+                    {link === "build-your-vision"
+                      ? "Contact Us"
+                      : link.charAt(0).toUpperCase() + link.slice(1)}
                   </Link>
                 </div>
-              </div>
-            </div>
-            {/* Industires */}
-            <div>
-              <div className="py-5 -ml-2 font-bold">
-                <h1>Industries</h1>
-              </div>
-              <div className="px-2 gap-y-8 mt-2 font-semibold text-[16px] leading-tight  flex flex-col">
-                <div className="flex ">
-                  <img
-                    className="mr-2 w-5"
-                    src="https://landing.ai/wp-content/uploads/2023/12/Validation.svg"
-                    alt=""
-                  />
-                  <Link to="/industry">Industry</Link>
-                </div>
-              </div>
-            </div>
-            <div>
-              <div className="py-5 -ml-2 font-bold">
-                <h1>More About Us</h1>
-              </div>
-              <div className="px-2 gap-y-8 mt-2 font-semibold text-[16px] leading-tight  flex flex-col">
-                <div className="flex ">
-                  <img
-                    className="mr-2 w-5"
-                    src="https://landing.ai/wp-content/uploads/2023/12/Validation.svg"
-                    alt=""
-                  />
-                  <Link to="/build-your-vision">Contact Us</Link>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </div>
