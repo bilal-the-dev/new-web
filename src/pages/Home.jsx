@@ -247,9 +247,9 @@ const Home = () => {
           <div className="mb-18">
             <div className="flex flex-col items-center justify-center px-4  text-center">
               <h1 className="text-5xl font-bold text-gray-800 mb-4  text-[#2596be]">
-                <span>Every </span>
+                <span>Monitize Your Video </span>
                 <span className="relative inline-block">
-                  <span className="text-[#2596be]">Business </span>
+                  <span className="text-[#2596be]"> {""} Surveillance</span>
                   <span
                     className="absolute bottom-0 left-0 w-full"
                     style={{
@@ -271,7 +271,7 @@ const Home = () => {
                     }}
                   />
                 </span>
-                <span> is Unique</span>
+                <span> Data</span>
               </h1>
             </div>
 
