@@ -64,7 +64,7 @@ const steps = [
     description: "Connect to exiting CCTV infrastructure",
   },
   {
-    icon: <Cpu className="w-16 h-16 text-[#2596be]" />,
+    icon: <Cpu className="w-16 h-16 text-gray-700" />,
     title: "Process Video",
     description: "Video feed is processed through AI-powered analytics",
   },
@@ -73,10 +73,28 @@ const steps = [
     title: "Real-Time Alerts",
     description: "Follow up on notifications to ensure smooth operations",
     subStep: {
-      icon: <BarChart3 className="w-16 h-16 text-gray-700" />,
+      icon: <BarChart3 className="w-16 h-16 text-[#2596be]" />,
       title: "Analyze Trends",
       description: "Understand if your action plans are working effectively",
     },
+  },
+];
+
+const secondSteps = [
+  {
+    icon: <BiCctv className="w-16 h-16 text-[#2596be]" />,
+    title: "Connect CCTV",
+    description: "Connect to exiting CCTV infrastructure",
+  },
+  {
+    icon: <Cpu className="w-16 h-16 text-[#2596be]" />,
+    title: "Process Video",
+    description: "Video feed is processed through AI-powered analytics",
+  },
+  {
+    icon: <MessageSquare className="w-16 h-16 text-[#2596be]" />,
+    title: "Real-Time Alerts",
+    description: "Follow up on notifications to ensure smooth operations",
   },
 ];
 
@@ -436,7 +454,7 @@ const Home = () => {
 
           <div className="container mx-auto px-4 py-4">
             <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-              {steps.map((step, index) => (
+              {secondSteps.map((step, index) => (
                 <React.Fragment key={index}>
                   <div className="w-64 relative group">
                     <div className="bg-white backdrop-blur-sm p-6 rounded-xl shadow-md  hover:shadow-xl transition-all duration-300 ">
